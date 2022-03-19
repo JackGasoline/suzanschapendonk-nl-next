@@ -1,0 +1,29 @@
+
+// See: https://css-tricks.com/snippets/sass/strip-unit-function/
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@function px-to-em($pixels, $context: 16) {
+    @return #{strip-unit($pixels) / $context}em;
+}
+
+// Creates a clamped property based on a min and max value.
+@mixin clamp-viewport-unit-vh($property, $min, $max) {
+    $vu: (strip-unit($min) / strip-unit($layout-mobile-min-height)) * 100;
+
+    #{$property}: $max; // Fallback for browsers that do not support clamp.
+    #{$property}: clamp(#{$min}, #{$vu}vh, #{$max});
+}
+
+// Creates a clamped property based on a min and max value.
+@mixin clamp-viewport-unit-vw($property, $min, $max) {
+    $vu: (strip-unit($max) / strip-unit($layout-mobile-max-width)) * 100;
+
+    #{$property}: $max; // Fallback for browsers that do not support clamp.
+    #{$property}: clamp(#{$min}, #{$vu}vw, #{$max});
+}

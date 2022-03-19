@@ -1,0 +1,14 @@
+@import 'swiper/swiper.scss';
+@import 'swiper/components/pagination/pagination.scss';
+
+.swiper-pagination-bullets {
+    .swiper-pagination-bullet-active-next {
+        transform: scale(0.8);
+        opacity: 0.75;
+    }
+
+    .swiper-pagination-bullet-active {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

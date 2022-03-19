@@ -1,0 +1,51 @@
+// See: https://engageinteractive.co.uk/blog/em-vs-rem-vs-px
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+/*
+Sets the basic typography styling for the page.
+Most of the defaults are already in modern-normalize and sanitize.css.
+ */
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: var(--bg-color-1);
+    color: var(--primary-color);
+    stroke: var(--primary-color);
+    stroke-width: 0;
+    //font-family: $typography-font-npo-sans;
+    font-family: 'Avenir', sans-serif;
+    font-size: 1.8rem;
+    font-weight: $typography-font-weight-regular;
+    line-height: $typography-line-height-xlarge;
+    height: 100%;
+    min-width: 32rem;
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+
+    // targets only iOS devices, fixes bug where address bar leaves whitespace after collapsing
+    @supports (-webkit-touch-callout: none) {
+        height: 100vh;
+    }
+}
+
+#__next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    width: 100%; // Needed for the useBodyScrollLock functionality.
+}
+
+#modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}

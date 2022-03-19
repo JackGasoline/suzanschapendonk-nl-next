@@ -1,0 +1,15 @@
+
+/*
+Breakpoint sizes: https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+Based on resolution data from NPO Focus.
+
+sass-mq compiles px values to em-based queries.
+See: https://css-tricks.com/zooming-squishes/
+ */
+$mq-breakpoints: (
+    tablet: 600px,
+    laptop: 1200px,
+    desktop: 1500px
+);
+
+@import '~sass-mq/mq';

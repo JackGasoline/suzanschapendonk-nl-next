@@ -1,0 +1,134 @@
+
+/*
+Application-wide and opinionated (but best practice) resets and fixes for elements.
+Most of the defaults are already in modern-normalize and sanitize.css.
+ */
+
+*,
+::before,
+::after {
+    background-repeat: no-repeat;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre,
+ul,
+ol {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+th {
+    font-weight: inherit;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    padding: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+        color: currentColor;
+    }
+}
+
+b,
+strong {
+    font-weight: $typography-font-weight-bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+::selection {
+    background: $color-light;
+}
+
+::-ms-expand,
+::-ms-clear {
+    display: none;
+}
+
+/*
+Focus styles for accessibility.
+*/
+:focus {
+    outline: 2pt dashed $color-blue-mid;
+    outline-offset: 4pt;
+}
+
+/*
+Optional class to apply to body when mouse is detected. Must be removed
+when use of tab key is detected.
+*/
+.using-mouse *:focus {
+    outline: none;
+}
+
+/*
+Future-proof focus styles that will only show during keyboard navigation
+(not while using mouse).
+*/
+@supports #{'\(*:focus-visible)'} {
+    :focus {
+        outline: none;
+    }
+    :focus-visible {
+        outline: 2pt dashed $color-blue-mid;
+        outline-offset: 4pt;
+    }
+}
+
+/*
+Focus styles for accessibility.
+*/
+input:focus {
+    outline-offset: 0;
+}
+
+/*
+Clearfix for resetting floats
+*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

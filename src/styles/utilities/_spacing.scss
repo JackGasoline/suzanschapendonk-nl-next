@@ -1,0 +1,34 @@
+
+/*
+Responsive and flexible spacing system.
+
+Can be extended with more classes, but watch out: each class will be created for each spacing size at each breakpoint.
+3 breakpoints * 10 sizes = 30 variants generated per class.
+
+Example usage: <div className="u-margin-bottom-md u-margin-bottom-lg@laptop">
+See: https://medium.com/codyhouse/create-your-design-system-part-4-spacing-895c9213e2b9
+ */
+
+@mixin spacing-margins ($breakpoint-affix: null) {
+    @each $spacing-name, $spacing-size in $spacing-sizes {
+        .u-margin-top-#{$spacing-name}#{$breakpoint-affix} {
+            margin-top: $spacing-size;
+        }
+
+        .u-margin-bottom-#{$spacing-name}#{$breakpoint-affix} {
+            margin-bottom: $spacing-size;
+        }
+    }
+}
+
+@include spacing-margins();
+
+@each $breakpoint-name, $breakpoint-size in $mq-breakpoints {
+    $breakpoint-affix: \@#{$breakpoint-name};
+
+    @include mq($from: $breakpoint-name) {
+        @include spacing-margins($breakpoint-affix);
+    }
+}
+
+

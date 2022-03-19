@@ -1,8 +1,11 @@
+import React, {Fragment} from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import axios from 'axios'
 import {decode} from 'html-entities'
+import TypeIt from 'typeit-react'
 import styles from '@/styles/Home.module.scss'
+import moreStyles from './Mijnwerk.module.scss'
 import WorkImage from '@/components/WorkImage/WorkImage'
 
 const fetchData = async (url) => await axios.get(url)
@@ -28,16 +31,18 @@ const Home = props => {
 
       {props.pageData[0] && (
         <div>
-          <h1>{decode(props.pageData[0].title.rendered)}</h1>
+          <h1 className={moreStyles.mijnWerkHeader}>
+              <TypeIt options={{cursor: false}}>{decode(props.pageData[0].title.rendered)}</TypeIt>
+          </h1>
           <div dangerouslySetInnerHTML={{__html: props.pageData[0].content.rendered}}></div>
         </div>
       )}
     {props.pageData[0].acf && (
       <div className={styles.imageContainer}>
       {props.pageData[0] && Object.keys(props.pageData[0].acf).map((key, i) => (
-          <>
+          <Fragment key={`workitem${i}`}>
             {props.pageData[0].acf[key].sizes && <WorkImage alt={props.pageData[0].acf[key].alt} src={props.pageData[0].acf[key].sizes.medium} key={props.pageData[0].acf[key].ID} id={props.pageData[0].acf[key].ID} />}
-          </>
+          </Fragment>
         ))}
       </div>
     )}

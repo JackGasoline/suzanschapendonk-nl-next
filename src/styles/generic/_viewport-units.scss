@@ -1,0 +1,35 @@
+
+/*
+Fixes viewport units, primarily on mobile.
+See: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+See: hooks/fixViewportUnits.js
+
+--vh-initial
+Will only be set once on page load, this primarily fixes a bug on mobile with 100% viewport heights. Helpful for
+elements that need to cover an exact part of the screen initially.
+
+--vh-reactive
+Responds to screen resize events, but can cause jumps in the UI. This is helpful if for example you always want an
+overlay to cover the whole screen.
+ */
+
+:root {
+  --vh-initial: 1vh;
+  --vh-reactive: 1vh;
+  --vh100-initial: calc(var(--vh-initial) * 100);
+  --vh100-reactive: calc(var(--vh-reactive) * 100);
+}
+
+/*
+Example usage
+
+.exampleClass1 {
+    height: var(--vh100-initial);
+    max-height: var(--vh100-initial);
+}
+
+.exampleClass2 {
+    height: var(--vh100-reactive);
+    max-height: var(--vh100-reactive);
+}
+ */

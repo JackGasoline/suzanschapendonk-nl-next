@@ -1,0 +1,14 @@
+
+/*
+ITCSS principles
+----------------
+See: https://www.digitalocean.com/community/tutorials/how-to-solve-large-scale-css-bottlenecks-with-itcss-and-bem
+*/
+
+@import 'settings'; // Globally used settings.
+@import 'tools'; // Globally used mixins and functions (optional).
+@import 'generic'; // Reset and normalize global and element styles.
+// Objects are used as layout components.
+// Components are used as interface components.
+@import 'vendor'; // Any external dependencies, preferably installed via NPM.
+@import 'utilities'; // Utilities and helper classes with the ability to override anything.

@@ -1,0 +1,53 @@
+$color-white: #fff;
+$color-black: #000;
+
+$color-blue-dark: #062b4e;
+$color-blue-mid: #009cdd;
+$color-light: #b4d5fe;
+$color-red: #af0022;
+$color-pink: #ff7079;
+$color-yellow: #fd5;
+$color-purple: #8e4ce9;
+$color-green: #27e3bf;
+
+$color-gray-1: #282828;
+$color-gray-2: #1f2426;
+$color-gray-3: #666;
+$color-gray-4: #9c9c9c;
+$color-gray-5: #c7c8c9;
+$color-gray-6: #f6f6f6;
+
+%colorBlue {
+    color: $color-white;
+    background-color: $color-blue-mid;
+}
+
+%colorWhite {
+    color: $color-blue-dark;
+    background-color: $color-white;
+}
+
+%colorDarkBlue {
+    color: $color-white;
+    background-color: $color-blue-dark;
+}
+
+%colorRed {
+    color: $color-blue-dark;
+    background-color: $color-pink;
+}
+
+%colorGreen {
+    color: $color-blue-dark;
+    background-color: $color-green;
+}
+
+%colorYellow {
+    color: $color-blue-dark;
+    background-color: $color-yellow;
+}
+
+%colorPurple {
+    color: $color-white;
+    background-color: $color-purple;
+}

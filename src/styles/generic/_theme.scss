@@ -1,0 +1,31 @@
+
+// Light and Dark theme settings.
+:root {
+    --primary-color: #{$theme-light-color-primary};
+    --primary-color-2: #{$theme-light-color-primary-2};
+    --primary-color-3: #{$theme-light-color-primary-3};
+    --bg-color-1: #{$theme-light-color-bg-1};
+    --bg-color-2: #{$theme-light-color-bg-2};
+    --navigation-bg-color: #{$theme-light-color-navigation-bg};
+    --page-background-shape: #{$theme-light-color-bg-shape};
+}
+
+[data-theme='dark'] {
+    --primary-color: #{$theme-dark-color-primary};
+    --primary-color-2: #{$theme-dark-color-primary-2};
+    --primary-color-3: #{$theme-dark-color-primary-3};
+    --bg-color-1: #{$theme-dark-color-bg-1};
+    --bg-color-2: #{$theme-dark-color-bg-2};
+    --navigation-bg-color: #{$theme-dark-color-navigation-bg};
+    --page-background-shape: #{$theme-dark-color-bg-shape};
+}
+
+[data-theme='dark'][data-page-theme='halloffame'] {
+    --primary-color: #{$theme-dark-blue-color-primary};
+    --primary-color-2: #{$theme-dark-blue-color-primary-2};
+    --primary-color-3: #{$theme-dark-blue-color-primary-2};
+    --bg-color-1: #{$theme-dark-blue-color-bg-1};
+    --bg-color-2: #{$theme-dark-blue-color-bg-2};
+    --navigation-bg-color: #{$theme-dark-blue-color-navigation-bg};
+    --page-background-shape: #{$theme-dark-blue-color-bg-shape};
+}
