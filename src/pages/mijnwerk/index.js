@@ -17,7 +17,7 @@ const fetchData = async () => await axios.get('https://api.suzanschapendonk.nl/w
   );
 
 const Home = props => {
-  console.log(props.pageData)
+  //console.log(props.pageData)
   return (
     <div className={styles.container}>
       <Head>

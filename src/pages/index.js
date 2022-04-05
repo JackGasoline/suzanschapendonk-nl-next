@@ -4,6 +4,8 @@ import axios from 'axios'
 import {decode} from 'html-entities'
 import styles from '@/styles/Home.module.scss'
 
+import HomeAnimation from '@/components/HomeAnimation/HomeAnimation'
+
 const fetchData = async () => await axios.get('https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?categories=17')
   .then(res => ({
     error: false,
@@ -16,7 +18,6 @@ const fetchData = async () => await axios.get('https://api.suzanschapendonk.nl/w
   );
 
 const Home = props => {
-  console.log(props.pageData)
   return (
     <div className={styles.container}>
       <Head>
@@ -25,13 +26,7 @@ const Home = props => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {props.pageData.map((post) => (
-        <div key={post.id}>
-          <h1>{decode(post.title.rendered)}</h1>
-          <div dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
-        </div>
-      ))}
-
+      <HomeAnimation />
     </div>
   )
 }
