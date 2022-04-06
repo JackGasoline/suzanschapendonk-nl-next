@@ -1,21 +1,30 @@
 $animationWidth: 90vw;
 $animationWidthLarger: 60vw;
+$animationWidthMegaLarge: 40vw;
 
 .container {
     width: $animationWidth;
     height: calc(0.75 * $animationWidth);
     margin: auto;
     position: absolute;
-    top: 50%;
+    top: calc(50% -  $animationWidth/2) ;
     left: calc((100vw - $animationWidth)/2);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    overflow: visible;
+    //-ms-transform: translateY(-50%);
+    //transform: translateY(-50%);
+    //overflow: visible;
 
     @media (min-width: 1400px) {
         width: $animationWidthLarger;
         height: calc(0.75 * $animationWidthLarger);
         left: calc((100vw - $animationWidthLarger)/2);
+        top: calc(50% -  $animationWidthLarger/2) ;
+    }
+
+    @media (min-width: 2400px) {
+        width: $animationWidthMegaLarge;
+        height: calc(0.75 * $animationWidthMegaLarge);
+        left: calc((100vw - $animationWidthMegaLarge)/2);
+        top: calc(50% -  $animationWidthMegaLarge/2) ;
     }
 
     .WorcestershiresauceWrapper {
@@ -34,6 +43,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
     
@@ -54,6 +69,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .SambalWrapper {
@@ -72,6 +93,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
 
@@ -92,6 +119,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .PaprikapoederWrapper {
@@ -110,6 +143,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
 
@@ -130,6 +169,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .Wijn1Wrapper {
@@ -149,6 +194,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .Wijn2Wrapper {
@@ -167,6 +218,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
 
@@ -188,6 +245,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .Lijn2Wrapper {
@@ -208,6 +271,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .FotolijstjeWrapper {
@@ -226,6 +295,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
 
@@ -247,6 +322,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .Lijn4Wrapper {
@@ -267,6 +348,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .CupcakeWrapper {
@@ -285,6 +372,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
     
@@ -305,6 +398,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .Cactus2Wrapper {
@@ -323,6 +422,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
 
@@ -343,6 +448,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .KoffiepotjeWrapper {
@@ -362,43 +473,11 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
-    }
-
-    .EggslutWrapper {
-        $width: 16.32;
-        $height: 19.18;
-        $left: 64.74;
-        $top: 12.91;
-
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-    }
-
-    .Wijn1Wrapper {
-        $width: 5.97;
-        $height: 27.86;
-        $left: 83.02;
-        $top: 0.72;
-
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
 
@@ -420,6 +499,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .Lijn6Wrapper {
@@ -440,6 +525,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .LepelWrapper {
@@ -458,6 +549,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
     
@@ -478,6 +575,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .LijstjecoronaWrapper {
@@ -496,6 +599,12 @@ $animationWidthLarger: 60vw;
             height: calc($height /100 * $animationWidthLarger);
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
+        }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
         }
     }
 
@@ -516,6 +625,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
     .SiteHeaderWrapper {
@@ -531,6 +646,9 @@ $animationWidthLarger: 60vw;
             @media (min-width: 1400px) {
                 font-size: calc(0.055 * $animationWidthLarger);      
             }
+            @media (min-width: 2400px) {
+                font-size: calc(0.055 * $animationWidthMegaLarge);      
+            }
         }
         position: absolute;
         width: calc($width /100 * $animationWidth);
@@ -543,8 +661,12 @@ $animationWidthLarger: 60vw;
             margin-left: calc($left /100 * $animationWidthLarger);
             margin-top: calc($top /100 * $animationWidthLarger);
         }
-
-
+        @media (min-width: 2400px) {
+            width: calc($width /100 * $animationWidthMegaLarge);
+            height: calc($height /100 * $animationWidthMegaLarge);
+            margin-left: calc($left /100 * $animationWidthMegaLarge);
+            margin-top: calc($top /100 * $animationWidthMegaLarge);
+        }
     }
 
 
