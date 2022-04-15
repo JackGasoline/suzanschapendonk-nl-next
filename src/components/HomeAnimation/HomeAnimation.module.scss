@@ -2,6 +2,26 @@ $animationWidth: 90vw;
 $animationWidthLarger: 60vw;
 $animationWidthMegaLarge: 40vw;
 
+@mixin image-size-position($width, $height, $left, $top) {
+    position: absolute;
+    width: calc($width /100 * $animationWidth);
+    height: calc($height /100 * $animationWidth);
+    margin-left: calc($left /100 * $animationWidth);
+    margin-top: calc($top /100 * $animationWidth);
+    @media (min-width: 1400px) {
+        width: calc($width /100 * $animationWidthLarger);
+        height: calc($height /100 * $animationWidthLarger);
+        margin-left: calc($left /100 * $animationWidthLarger);
+        margin-top: calc($top /100 * $animationWidthLarger);
+    }
+    @media (min-width: 1900px) {
+        width: calc($width /100 * $animationWidthMegaLarge);
+        height: calc($height /100 * $animationWidthMegaLarge);
+        margin-left: calc($left /100 * $animationWidthMegaLarge);
+        margin-top: calc($top /100 * $animationWidthMegaLarge);
+    }
+}
+
 .container {
     width: $animationWidth;
     height: calc(0.75 * $animationWidth);
@@ -17,14 +37,14 @@ $animationWidthMegaLarge: 40vw;
         width: $animationWidthLarger;
         height: calc(0.75 * $animationWidthLarger);
         left: calc((100vw - $animationWidthLarger)/2);
-        top: calc(50% -  $animationWidthLarger/2) ;
+        top: calc(50% -  $animationWidthLarger/2 + 5%) ;
     }
 
     @media (min-width: 1900px) {
         width: $animationWidthMegaLarge;
         height: calc(0.75 * $animationWidthMegaLarge);
         left: calc((100vw - $animationWidthMegaLarge)/2);
-        top: calc(50% -  $animationWidthMegaLarge/2) ;
+        top: calc(50% -  $animationWidthMegaLarge/2 + 5%) ;
     }
 
     .WorcestershiresauceWrapper {
@@ -33,23 +53,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 6.84;
         $top: 9.84;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
     
     .TabascoWrapper {
@@ -58,23 +62,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 12.83;
         $top: 13.29;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .SambalWrapper {
@@ -83,23 +71,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 18.57;
         $top: 19.65;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .KipWrapper {
@@ -108,23 +80,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 31.94;
         $top: 4.25;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .PaprikapoederWrapper {
@@ -133,23 +89,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 46.33;
         $top: 21.62;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .EggslutWrapper {
@@ -158,23 +98,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 64.74;
         $top: 12.91;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Wijn1Wrapper {
@@ -183,23 +107,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 83.02;
         $top: 0.72;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Wijn2Wrapper {
@@ -208,23 +116,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 87.43;
         $top: 0.1;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Lijn1Wrapper {
@@ -234,23 +126,7 @@ $animationWidthMegaLarge: 40vw;
         $top: 28.74;
         z-index: -1;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Lijn2Wrapper {
@@ -260,23 +136,7 @@ $animationWidthMegaLarge: 40vw;
         $top: 29.86;
         z-index: -1;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .FotolijstjeWrapper {
@@ -285,23 +145,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 6.18;
         $top: 31.22;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Lijn3Wrapper {
@@ -311,23 +155,7 @@ $animationWidthMegaLarge: 40vw;
         $top: 36.49;
         z-index: -1;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Lijn4Wrapper {
@@ -337,23 +165,7 @@ $animationWidthMegaLarge: 40vw;
         $top: 40.51;
         z-index: -1;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .CupcakeWrapper {
@@ -362,23 +174,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 6.57;
         $top: 41.28;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
     
     .Cactus1Wrapper {
@@ -387,23 +183,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 37.9;
         $top: 44.51;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Cactus2Wrapper {
@@ -412,23 +192,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 40.52;
         $top: 44.38;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Cactus3Wrapper {
@@ -437,23 +201,8 @@ $animationWidthMegaLarge: 40vw;
         $left: 48.71;
         $top: 44.25;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
+
     }
 
     .KoffiepotjeWrapper {
@@ -462,23 +211,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 84.33;
         $top: 42.87;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Lijn5Wrapper {
@@ -488,23 +221,7 @@ $animationWidthMegaLarge: 40vw;
         $top: 48;
         z-index: -1;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .Lijn6Wrapper {
@@ -514,23 +231,7 @@ $animationWidthMegaLarge: 40vw;
         $top: 55.82;
         z-index: -1;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .LepelWrapper {
@@ -539,23 +240,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 11.79;
         $top: 55.82;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
     
     .OvenwantWrapper {
@@ -564,23 +249,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 14.75;
         $top: 55.82;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .LijstjecoronaWrapper {
@@ -589,23 +258,7 @@ $animationWidthMegaLarge: 40vw;
         $left: 58.32;
         $top: 57.98;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .LijstjezoetzuresausWrapper {
@@ -614,30 +267,14 @@ $animationWidthMegaLarge: 40vw;
         $left: 72.12;
         $top: 58.16;
 
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
     .SiteHeaderWrapper {
         $width: 82;
         $height: 7.5;
         $left: 18;
-        $top: 36.4;
+        $top: 36;
         h1 {
             font-family: 'itc-american-typewriter';
             font-weight: 700;
@@ -650,23 +287,7 @@ $animationWidthMegaLarge: 40vw;
                 font-size: calc(0.055 * $animationWidthMegaLarge);      
             }
         }
-        position: absolute;
-        width: calc($width /100 * $animationWidth);
-        height: calc($height /100 * $animationWidth);
-        margin-left: calc($left /100 * $animationWidth);
-        margin-top: calc($top /100 * $animationWidth);
-        @media (min-width: 1400px) {
-            width: calc($width /100 * $animationWidthLarger);
-            height: calc($height /100 * $animationWidthLarger);
-            margin-left: calc($left /100 * $animationWidthLarger);
-            margin-top: calc($top /100 * $animationWidthLarger);
-        }
-        @media (min-width: 1900px) {
-            width: calc($width /100 * $animationWidthMegaLarge);
-            height: calc($height /100 * $animationWidthMegaLarge);
-            margin-left: calc($left /100 * $animationWidthMegaLarge);
-            margin-top: calc($top /100 * $animationWidthMegaLarge);
-        }
+        @include image-size-position($width, $height, $left, $top);
     }
 
 
