@@ -22,7 +22,6 @@ const fetchData = async (url) =>
     }));
 
 const Home = (props) => {
-  console.log(props.pageData);
   return (
     <div className={styles.container}>
       <NextSeo
