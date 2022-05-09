@@ -3,297 +3,295 @@ $animationWidthLarger: 60vw;
 $animationWidthMegaLarge: 40vw;
 
 @mixin image-size-position($width, $height, $left, $top) {
-    position: absolute;
-    width: calc($width /100 * $animationWidth);
-    height: calc($height /100 * $animationWidth);
-    margin-left: calc($left /100 * $animationWidth);
-    margin-top: calc($top /100 * $animationWidth);
-    @media (min-width: 1400px) {
-        width: calc($width /100 * $animationWidthLarger);
-        height: calc($height /100 * $animationWidthLarger);
-        margin-left: calc($left /100 * $animationWidthLarger);
-        margin-top: calc($top /100 * $animationWidthLarger);
-    }
-    @media (min-width: 1900px) {
-        width: calc($width /100 * $animationWidthMegaLarge);
-        height: calc($height /100 * $animationWidthMegaLarge);
-        margin-left: calc($left /100 * $animationWidthMegaLarge);
-        margin-top: calc($top /100 * $animationWidthMegaLarge);
-    }
+  position: absolute;
+  width: calc($width / 100 * $animationWidth);
+  height: calc($height / 100 * $animationWidth);
+  margin-left: calc($left / 100 * $animationWidth);
+  margin-top: calc($top / 100 * $animationWidth);
+  @media (min-width: 1400px) {
+    width: calc($width / 100 * $animationWidthLarger);
+    height: calc($height / 100 * $animationWidthLarger);
+    margin-left: calc($left / 100 * $animationWidthLarger);
+    margin-top: calc($top / 100 * $animationWidthLarger);
+  }
+  @media (min-width: 1900px) {
+    width: calc($width / 100 * $animationWidthMegaLarge);
+    height: calc($height / 100 * $animationWidthMegaLarge);
+    margin-left: calc($left / 100 * $animationWidthMegaLarge);
+    margin-top: calc($top / 100 * $animationWidthMegaLarge);
+  }
 }
 
 .container {
-    width: $animationWidth;
-    height: calc(0.75 * $animationWidth);
-    margin: auto;
-    position: absolute;
-    top: calc(50% -  $animationWidth/2) ;
-    left: calc((100vw - $animationWidth)/2);
-    //-ms-transform: translateY(-50%);
-    //transform: translateY(-50%);
-    //overflow: visible;
+  width: $animationWidth;
+  height: calc(0.75 * $animationWidth);
+  margin: auto;
+  position: absolute;
+  top: calc(50% - $animationWidth/2);
+  left: calc((100vw - $animationWidth) / 2);
+  //-ms-transform: translateY(-50%);
+  //transform: translateY(-50%);
+  //overflow: visible;
 
-    @media (min-width: 1400px) {
-        width: $animationWidthLarger;
-        height: calc(0.75 * $animationWidthLarger);
-        left: calc((100vw - $animationWidthLarger)/2);
-        top: calc(50% -  $animationWidthLarger/2 + 5%) ;
+  @media (min-width: 1400px) {
+    width: $animationWidthLarger;
+    height: calc(0.75 * $animationWidthLarger);
+    left: calc((100vw - $animationWidthLarger) / 2);
+    top: calc(50% - $animationWidthLarger/2 + 5%);
+  }
+
+  @media (min-width: 1900px) {
+    width: $animationWidthMegaLarge;
+    height: calc(0.75 * $animationWidthMegaLarge);
+    left: calc((100vw - $animationWidthMegaLarge) / 2);
+    top: calc(50% - $animationWidthMegaLarge/2 + 5%);
+  }
+
+  .WorcestershiresauceWrapper {
+    $width: 8.3;
+    $height: 19.38;
+    $left: 6.84;
+    $top: 9.84;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .TabascoWrapper {
+    $width: 5.5;
+    $height: 15.92;
+    $left: 12.83;
+    $top: 13.29;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .SambalWrapper {
+    $width: 7.98;
+    $height: 9.76;
+    $left: 18.57;
+    $top: 19.65;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .KipWrapper {
+    $width: 18;
+    $height: 28.4;
+    $left: 31.94;
+    $top: 4.25;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .PaprikapoederWrapper {
+    $width: 6.3;
+    $height: 9.46;
+    $left: 46.33;
+    $top: 21.62;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .EggslutWrapper {
+    $width: 16.32;
+    $height: 19.18;
+    $left: 64.74;
+    $top: 12.91;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Wijn1Wrapper {
+    $width: 5.97;
+    $height: 27.86;
+    $left: 83.02;
+    $top: 0.72;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Wijn2Wrapper {
+    $width: 6.33;
+    $height: 28.97;
+    $left: 87.43;
+    $top: 0.1;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Lijn1Wrapper {
+    $width: 98.47;
+    $height: 0.28;
+    $left: 0;
+    $top: 28.74;
+    z-index: -1;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Lijn2Wrapper {
+    $width: 99.93;
+    $height: 0.28;
+    $left: 0;
+    $top: 29.86;
+    z-index: -1;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .FotolijstjeWrapper {
+    $width: 9.74;
+    $height: 11.35;
+    $left: 6.18;
+    $top: 31.22;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Lijn3Wrapper {
+    $width: 98.15;
+    $height: 5.8;
+    $left: 0;
+    $top: 36.49;
+    z-index: -1;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Lijn4Wrapper {
+    $width: 99.61;
+    $height: 5.8;
+    $left: 0;
+    $top: 40.51;
+    z-index: -1;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .CupcakeWrapper {
+    $width: 5.26;
+    $height: 13.35;
+    $left: 6.57;
+    $top: 41.28;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Cactus1Wrapper {
+    $width: 6.57;
+    $height: 10.88;
+    $left: 37.9;
+    $top: 44.51;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Cactus2Wrapper {
+    $width: 9.22;
+    $height: 13.46;
+    $left: 40.52;
+    $top: 44.38;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Cactus3Wrapper {
+    $width: 6.77;
+    $height: 11.34;
+    $left: 48.71;
+    $top: 44.25;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .KoffiepotjeWrapper {
+    $width: 12.26;
+    $height: 17.29;
+    $left: 84.33;
+    $top: 42.87;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Lijn5Wrapper {
+    $width: 98.16;
+    $height: 6.52;
+    $left: 0.14;
+    $top: 48;
+    z-index: -1;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .Lijn6Wrapper {
+    $width: 99.62;
+    $height: 7.33;
+    $left: 0.14;
+    $top: 55.82;
+    z-index: -1;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .LepelWrapper {
+    $width: 3.71;
+    $height: 15.41;
+    $left: 11.79;
+    $top: 55.82;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .OvenwantWrapper {
+    $width: 11.5;
+    $height: 19.12;
+    $left: 14.75;
+    $top: 55.82;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .LijstjecoronaWrapper {
+    $width: 12.58;
+    $height: 17.02;
+    $left: 58.32;
+    $top: 57.98;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .LijstjezoetzuresausWrapper {
+    $width: 12.4;
+    $height: 16.86;
+    $left: 72.12;
+    $top: 58.16;
+
+    @include image-size-position($width, $height, $left, $top);
+  }
+
+  .SiteHeaderWrapper {
+    $width: 82;
+    $height: 7.5;
+    $left: 18;
+    $top: 36;
+    h1 {
+      font-family: "itc-american-typewriter";
+      font-weight: 700;
+      font-size: calc(0.055 * $animationWidth);
+      color: black;
+      @media (min-width: 1400px) {
+        font-size: calc(0.055 * $animationWidthLarger);
+      }
+      @media (min-width: 1900px) {
+        font-size: calc(0.055 * $animationWidthMegaLarge);
+      }
     }
+    @include image-size-position($width, $height, $left, $top);
+  }
 
-    @media (min-width: 1900px) {
-        width: $animationWidthMegaLarge;
-        height: calc(0.75 * $animationWidthMegaLarge);
-        left: calc((100vw - $animationWidthMegaLarge)/2);
-        top: calc(50% -  $animationWidthMegaLarge/2 + 5%) ;
-    }
-
-    .WorcestershiresauceWrapper {
-        $width: 8.3;
-        $height: 19.38;
-        $left: 6.84;
-        $top: 9.84;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-    
-    .TabascoWrapper {
-        $width: 5.5;
-        $height: 15.92;
-        $left: 12.83;
-        $top: 13.29;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .SambalWrapper {
-        $width: 7.98;
-        $height: 9.76;
-        $left: 18.57;
-        $top: 19.65;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .KipWrapper {
-        $width: 18;
-        $height: 28.40;
-        $left: 31.94;
-        $top: 4.25;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .PaprikapoederWrapper {
-        $width: 6.3;
-        $height: 9.46;
-        $left: 46.33;
-        $top: 21.62;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .EggslutWrapper {
-        $width: 16.32;
-        $height: 19.18;
-        $left: 64.74;
-        $top: 12.91;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Wijn1Wrapper {
-        $width: 5.97;
-        $height: 27.86;
-        $left: 83.02;
-        $top: 0.72;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Wijn2Wrapper {
-        $width: 6.33;
-        $height: 28.97;
-        $left: 87.43;
-        $top: 0.1;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Lijn1Wrapper {
-        $width: 98.47;
-        $height: 0.28;
-        $left: 0;
-        $top: 28.74;
-        z-index: -1;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Lijn2Wrapper {
-        $width: 99.93;
-        $height: 0.28;
-        $left: 0;
-        $top: 29.86;
-        z-index: -1;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .FotolijstjeWrapper {
-        $width: 9.74;
-        $height: 11.35;
-        $left: 6.18;
-        $top: 31.22;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Lijn3Wrapper {
-        $width: 98.15;
-        $height: 5.8;
-        $left: 0;
-        $top: 36.49;
-        z-index: -1;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Lijn4Wrapper {
-        $width: 99.61;
-        $height: 5.8;
-        $left: 0;
-        $top: 40.51;
-        z-index: -1;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .CupcakeWrapper {
-        $width: 5.26;
-        $height: 13.35;
-        $left: 6.57;
-        $top: 41.28;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-    
-    .Cactus1Wrapper {
-        $width: 6.57;
-        $height: 10.88;
-        $left: 37.9;
-        $top: 44.51;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Cactus2Wrapper {
-        $width: 9.22;
-        $height: 13.46;
-        $left: 40.52;
-        $top: 44.38;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Cactus3Wrapper {
-        $width: 6.77;
-        $height: 11.34;
-        $left: 48.71;
-        $top: 44.25;
-
-        @include image-size-position($width, $height, $left, $top);
-
-    }
-
-    .KoffiepotjeWrapper {
-        $width: 12.26;
-        $height: 17.29;
-        $left: 84.33;
-        $top: 42.87;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Lijn5Wrapper {
-        $width: 98.16;
-        $height: 6.52;
-        $left: 0.14;
-        $top: 48;
-        z-index: -1;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .Lijn6Wrapper {
-        $width: 99.62;
-        $height: 7.33;
-        $left: 0.14;
-        $top: 55.82;
-        z-index: -1;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .LepelWrapper {
-        $width: 3.71;
-        $height: 15.41;
-        $left: 11.79;
-        $top: 55.82;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-    
-    .OvenwantWrapper {
-        $width: 11.5;
-        $height: 19.12;
-        $left: 14.75;
-        $top: 55.82;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .LijstjecoronaWrapper {
-        $width: 12.58;
-        $height: 17.02;
-        $left: 58.32;
-        $top: 57.98;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .LijstjezoetzuresausWrapper {
-        $width: 12.40;
-        $height: 16.86;
-        $left: 72.12;
-        $top: 58.16;
-
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-    .SiteHeaderWrapper {
-        $width: 82;
-        $height: 7.5;
-        $left: 18;
-        $top: 36;
-        h1 {
-            font-family: 'itc-american-typewriter';
-            font-weight: 700;
-            font-size: calc(0.055 * $animationWidth);  
-            color: black;   
-            @media (min-width: 1400px) {
-                font-size: calc(0.055 * $animationWidthLarger);      
-            }
-            @media (min-width: 1900px) {
-                font-size: calc(0.055 * $animationWidthMegaLarge);      
-            }
-        }
-        @include image-size-position($width, $height, $left, $top);
-    }
-
-
-    div.img {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
+  div.img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 }

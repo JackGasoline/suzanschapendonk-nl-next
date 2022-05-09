@@ -1,15 +1,15 @@
- @font-face {
-    font-display: swap; /* Makes text visible ASAP. */
-    font-family: 'NPOSans';
-    font-weight: $typography-font-weight-regular;
-    font-style: normal;
-    src: url('#{$public-path}/fonts/NPOSans-Regular.woff2') format('woff2');
+@font-face {
+  font-display: swap; /* Makes text visible ASAP. */
+  font-family: "NPOSans";
+  font-weight: $typography-font-weight-regular;
+  font-style: normal;
+  src: url("#{$public-path}/fonts/NPOSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap; /* Makes text visible ASAP. */
-    font-family: 'NPOSans';
-    font-weight: $typography-font-weight-bold;
-    font-style: normal;
-    src: url('#{$public-path}/fonts/NPOSans-Bold.woff2') format('woff2');
+  font-display: swap; /* Makes text visible ASAP. */
+  font-family: "NPOSans";
+  font-weight: $typography-font-weight-bold;
+  font-style: normal;
+  src: url("#{$public-path}/fonts/NPOSans-Bold.woff2") format("woff2");
 }
