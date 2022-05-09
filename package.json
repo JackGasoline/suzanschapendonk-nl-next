@@ -23,6 +23,7 @@
     "sass": "^1.49.7",
     "sass-mq": "^6.0.0",
     "sharp": "^0.30.3",
+    "simple-react-lightbox": "^3.6.9-0",
     "swiper": "^8.0.7",
     "typeit-react": "^2.3.2"
   },

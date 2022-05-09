@@ -119,21 +119,17 @@
   cursor: pointer;
 }
 
-.imageContainer {
+.imageContainer div:first-child  {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  position: absolute;
 
   .workimage {
-    width: 25%;
-    span {
-      position: initial !important;
-    }
-  }
+    display: block;
+    position: relative;
+    width: 22vw;
+    height: 22vw;
 
-  .imageWorkimage {
-    width: 100% !important;
-    height: auto !important;
-    position: relative !important;
   }
 }

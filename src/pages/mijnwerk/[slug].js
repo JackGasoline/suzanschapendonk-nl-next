@@ -4,6 +4,7 @@ import Image from 'next/image'
 import axios from 'axios'
 import {decode} from 'html-entities'
 import TypeIt from 'typeit-react'
+import { SRLWrapper } from "simple-react-lightbox";
 import styles from '@/styles/Home.module.scss'
 import moreStyles from './Mijnwerk.module.scss'
 import WorkImage from '@/components/WorkImage/WorkImage'
@@ -35,13 +36,15 @@ const Home = props => {
       )}
     {props.pageData[0].acf && (
       <div className={styles.imageContainer}>
-      {props.pageData[0] && Object.keys(props.pageData[0].acf).map((key, i) => (
-          <Fragment key={`workitem${i}`}>
-            {props.pageData[0].acf[key].sizes && <WorkImage alt={props.pageData[0].acf[key].alt} src={props.pageData[0].acf[key].sizes.medium} key={props.pageData[0].acf[key].ID} id={props.pageData[0].acf[key].ID} />}
-          </Fragment>
-        ))}
-      </div>
-    )}
+        <SRLWrapper>
+        {props.pageData[0] && Object.keys(props.pageData[0].acf).map((key, i) => (
+            <a href={props.pageData[0].acf[key].url} key={`workitem${i}`} className={styles.workimage}>
+              {props.pageData[0].acf[key].sizes && <Image alt={props.pageData[0].acf[key].alt} src={props.pageData[0].acf[key].sizes.large} key={props.pageData[0].acf[key].ID} layout="fill" objectFit="contain" sizes="25vw" />}
+            </a>
+          ))}
+        </SRLWrapper>
+        </div>
+      )}
 
 
     </div>
