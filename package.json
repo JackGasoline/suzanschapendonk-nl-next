@@ -10,11 +10,12 @@
   "dependencies": {
     "axios": "^0.25.0",
     "eslint-import-resolver-alias": "^1.1.2",
+    "follow-redirects": "^1.14.8",
     "framer-motion": "^6.2.8",
     "html-entities": "^2.3.2",
     "minimist": "^1.2.6",
     "modern-normalize": "^1.1.0",
-    "next": "12.0.10",
+    "next": "12.1.0",
     "next-seo": "^4.28.1",
     "react": "17.0.2",
     "react-cool-dimensions": "^2.0.7",
