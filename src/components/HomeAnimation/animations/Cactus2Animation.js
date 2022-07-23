@@ -1,7 +1,12 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const Cactus2Animation = {
-    loading: loadingState,
+    loading: {
+      ...loadingState, 
+      y: "-70vh",
+      rotate: 100,
+      x: "5vw",
+    },
     hidden: {
       y: "-70vh",
       rotate: 100,

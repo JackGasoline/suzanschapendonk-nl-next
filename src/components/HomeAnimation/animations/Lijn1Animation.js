@@ -1,7 +1,11 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const Lijn1Animation = {
-    loading: loadingState,
+  loading: {
+    ...loadingState,
+            scale: [1,0,1],
+        x: "-10vw",
+  },
     hidden: {
         scale: [1,0,1],
         x: "-10vw",

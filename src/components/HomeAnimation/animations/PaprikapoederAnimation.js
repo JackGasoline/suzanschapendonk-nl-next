@@ -1,7 +1,11 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const PaprikapoederAnimation = {
-    loading: loadingState,
+    loading: {
+        ...loadingState,
+              x: "100vw",
+      rotate: -5,
+      },
     hidden: {
       x: "100vw",
       rotate: -5,

@@ -1,7 +1,13 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const WorcestershiresauceAnimation = {
-    loading: loadingState,
+    loading: {
+        ...loadingState,
+              y: "-70vh",
+      rotate: -90,
+      x: "-90vw",
+      opacity: 1,
+      },
     hidden: {
       y: "-70vh",
       rotate: -90,

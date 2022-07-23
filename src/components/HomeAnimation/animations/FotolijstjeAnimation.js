@@ -1,7 +1,11 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const FotolijstjeAnimation = {
-    loading: loadingState,
+  loading: {
+    ...loadingState,
+          x: "-100vw",
+      rotate: -55,
+  },
     hidden: {
       x: "-100vw",
       rotate: -55,

@@ -1,7 +1,11 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const OvenwantAnimation = {
-    loading: loadingState,
+    loading: {
+        ...loadingState,
+           y: "-100vh",
+      rotate: -25,   
+      },
     hidden: {
       y: "-100vh",
       rotate: -25,

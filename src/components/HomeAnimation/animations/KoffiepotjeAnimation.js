@@ -1,7 +1,11 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const KoffiepotjeAnimation = {
-    loading: loadingState,
+  loading: {
+    ...loadingState,
+          x: "70vw",
+      rotate: 5,
+  },
     hidden: {
       x: "70vw",
       rotate: 5,

@@ -1,7 +1,11 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const LijstjecoronaAnimation = {
-    loading: loadingState,
+    loading: {
+        ...loadingState,
+          y: "-100vh",
+      rotate: 5,    
+      },
     hidden: {
       y: "-100vh",
       rotate: 5,

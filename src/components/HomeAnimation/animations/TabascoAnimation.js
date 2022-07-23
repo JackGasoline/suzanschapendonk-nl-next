@@ -1,7 +1,12 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const TabascoAnimation = {
-    loading: loadingState,
+  loading: {
+    ...loadingState,
+          y: "-100vh",
+      rotate: 80,
+      x: "5vw",
+  },
     hidden: {
       y: "-100vh",
       rotate: 80,

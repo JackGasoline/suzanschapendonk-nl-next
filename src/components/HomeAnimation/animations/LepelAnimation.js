@@ -1,9 +1,13 @@
 import {loadingState, exitState} from "./defaultStates";
 
 export const LepelAnimation = {
-    loading: loadingState,
+  loading: {
+    ...loadingState,
+          y: "-100vh",
+      rotate: 5,
+  },
     hidden: {
-      x: "-100vw",
+      y: "-100vh",
       rotate: 5,
     },
     visible: {
@@ -15,7 +19,7 @@ export const LepelAnimation = {
         stiffness: 450,
       },
       rotate: 0,
-      x: "0",
+      y: "0",
     },
     hover: {
         rotate: [1.5, -1.5],
