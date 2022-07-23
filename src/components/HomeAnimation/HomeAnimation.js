@@ -31,7 +31,7 @@ import {
   worcestershiresauce,
 } from "./assets";
 
-import { TabascoAnimation, WorcestershiresauceAnimation } from "./animations";
+import { TabascoAnimation, WorcestershiresauceAnimation, SambalAnimation, KipAnimation, EggslutAnimation, PaprikapoederAnimation, Wijn1Animation, Wijn2Animation, Lijn1Animation, Lijn2Animation, FotolijstjeAnimation, Lijn3Animation, Lijn4Animation, CupcakeAnimation, Cactus1Animation, Cactus2Animation, Cactus3Animation, KoffiepotjeAnimation, Lijn5Animation, Lijn6Animation, LepelAnimation, OvenwantAnimation, LijstjecoronaAnimation, LijstjezoetzuresausAnimation } from "./animations";
 
 const HomeAnimation = (props) => {
   const [animationStatus, setAnimationStatus] = useState("loading");
@@ -100,7 +100,13 @@ const HomeAnimation = (props) => {
             />
           </div>
         </motion.div>
-        <div key="animation-sambal" className={styles.SambalWrapper}>
+        <motion.div
+          key="animation-sambal"
+          className={styles.SambalWrapper}
+          variants={SambalAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={sambal}
@@ -111,8 +117,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={() => handleImageLoad(2)}
             />
           </div>
-        </div>
-        <div key="animation-kip" className={styles.KipWrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-kip"
+          className={styles.KipWrapper}
+          variants={KipAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={kip}
@@ -123,10 +135,13 @@ const HomeAnimation = (props) => {
               onLoadingComplete={() => handleImageLoad(3)}
             />
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           key="animation-paprikapoeder"
           className={styles.PaprikapoederWrapper}
+          variants={PaprikapoederAnimation}
+          animate={animationStatus}
+          exit="exit"
         >
           <div className={styles.img}>
             <Image
@@ -138,8 +153,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={() => handleImageLoad(4)}
             />
           </div>
-        </div>
-        <div key="animation-eggslut" className={styles.EggslutWrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-eggslut"
+          className={styles.EggslutWrapper}
+          variants={EggslutAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={eggslut}
@@ -150,8 +171,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={() => handleImageLoad(5)}
             />
           </div>
-        </div>
-        <div key="animation-wijn1" className={styles.Wijn1Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-wijn1"
+          className={styles.Wijn1Wrapper}
+          variants={Wijn1Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={wijn_1}
@@ -162,8 +189,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={() => handleImageLoad(6)}
             />
           </div>
-        </div>
-        <div key="animation-wijn2" className={styles.Wijn2Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-wijn2"
+          className={styles.Wijn2Wrapper}
+          variants={Wijn2Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={wijn_2}
@@ -174,8 +207,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-lijn1" className={styles.Lijn1Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-lijn1"
+          className={styles.Lijn1Wrapper}
+          variants={Lijn1Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={lijn_1}
@@ -186,8 +225,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-lijn2" className={styles.Lijn2Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-lijn2"
+          className={styles.Lijn2Wrapper}
+          variants={Lijn2Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={lijn_2}
@@ -198,8 +243,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-fotolijstje" className={styles.FotolijstjeWrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-fotolijstje"
+          className={styles.FotolijstjeWrapper}
+          variants={FotolijstjeAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={fotolijstje}
@@ -210,7 +261,7 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
+        </motion.div>
         <div key="animation-siteheader" className={styles.SiteHeaderWrapper}>
           <h1 className={styles.Siteheader}>
             <TypeIt options={{ cursor: false }}>
@@ -218,7 +269,13 @@ const HomeAnimation = (props) => {
             </TypeIt>
           </h1>
         </div>
-        <div key="animation-lijn3" className={styles.Lijn3Wrapper}>
+        <motion.div
+          key="animation-lijn3"
+          className={styles.Lijn3Wrapper}
+          variants={Lijn3Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={lijn_3}
@@ -229,8 +286,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-lijn4" className={styles.Lijn4Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-lijn4"
+          className={styles.Lijn4Wrapper}
+          variants={Lijn4Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={lijn_4}
@@ -241,8 +304,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-cupcake" className={styles.CupcakeWrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-cupcake"
+          className={styles.CupcakeWrapper}
+          variants={CupcakeAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={cupcake}
@@ -253,8 +322,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-cactus1" className={styles.Cactus1Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-cactus1"
+          className={styles.Cactus1Wrapper}
+          variants={Cactus1Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={cactus_1}
@@ -265,8 +340,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-cactus2" className={styles.Cactus2Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-cactus2"
+          className={styles.Cactus2Wrapper}
+          variants={Cactus2Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={cactus_2}
@@ -277,8 +358,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-cactus3" className={styles.Cactus3Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-cactus3"
+          className={styles.Cactus3Wrapper}
+          variants={Cactus3Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={cactus_3}
@@ -289,8 +376,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-koffiepotje" className={styles.KoffiepotjeWrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-koffiepotje"
+          className={styles.KoffiepotjeWrapper}
+          variants={KoffiepotjeAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={koffiepotje}
@@ -301,8 +394,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-lijn5" className={styles.Lijn5Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-lijn5"
+          className={styles.Lijn5Wrapper}
+          variants={Lijn5Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={lijn_5}
@@ -313,8 +412,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-lijn6" className={styles.Lijn6Wrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-lijn6"
+          className={styles.Lijn6Wrapper}
+          variants={Lijn6Animation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={lijn_6}
@@ -325,8 +430,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-lepel" className={styles.LepelWrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-lepel"
+          className={styles.LepelWrapper}
+          variants={LepelAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={lepel}
@@ -337,8 +448,14 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div key="animation-ovenwant" className={styles.OvenwantWrapper}>
+        </motion.div>
+        <motion.div
+          key="animation-ovenwant"
+          className={styles.OvenwantWrapper}
+          variants={OvenwantAnimation}
+          animate={animationStatus}
+          exit="exit"
+        >
           <div className={styles.img}>
             <Image
               src={ovenwant}
@@ -349,10 +466,13 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           key="animation-lijstjecorona"
           className={styles.LijstjecoronaWrapper}
+          variants={LijstjecoronaAnimation}
+          animate={animationStatus}
+          exit="exit"
         >
           <div className={styles.img}>
             <Image
@@ -364,10 +484,13 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           key="animation-lijstjezoetzuresaus"
           className={styles.LijstjezoetzuresausWrapper}
+          variants={LijstjezoetzuresausAnimation}
+          animate={animationStatus}
+          exit="exit"
         >
           <div className={styles.img}>
             <Image
@@ -379,7 +502,7 @@ const HomeAnimation = (props) => {
               onLoadingComplete={(el) => handleImageLoad(el)}
             />
           </div>
-        </div>
+        </motion.div>
       </AnimatePresence>
     </div>
   );
