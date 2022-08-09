@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import TypeIt from "typeit-react";
-import { motion, AnimatePresence } from "framer-motion";
-import styles from "./HomeAnimation.module.scss";
+import React, { useEffect, useState } from "react"
+import Image from "next/image"
+import Link from 'next/link'
+import TypeIt from "typeit-react"
+import { motion, AnimatePresence } from "framer-motion"
+import styles from "./HomeAnimation.module.scss"
 
 import {
   cactus_1,
@@ -55,14 +56,19 @@ const HomeAnimation = (props) => {
       }, 100);
     }
   }, [imagesLoaded]);
-
+  
   /*useEffect(() => {
         console.log(animationStatus);
       }, [animationStatus])*/
 
   return (
     <div className={styles.container}>
-      <AnimatePresence exitBeforeEnter={false} onExitComplete={() => null}>
+      <motion.h1 className={styles.SiteHeader} layoutId="title">
+        <TypeIt options={{ cursor: false }}>
+          studio suzan schapendonk
+        </TypeIt>
+      </motion.h1>
+      <Link href="/mijnwerk" passHref>
         <motion.div
           key="animation-worcestershiresauce"
           className={styles.WorcestershiresauceWrapper}
@@ -71,7 +77,7 @@ const HomeAnimation = (props) => {
           whileHover="hover"
           exit="exit"
         >
-          <div className={styles.img}>
+        <div className={styles.img}>      
             <Image
               src={worcestershiresauce}
               alt="Worcestershiresauce"
@@ -79,9 +85,10 @@ const HomeAnimation = (props) => {
               objectFit="contain"
               sizes="15vw"
               onLoadingComplete={() => handleImageLoad(0)}
-            />
+            />       
           </div>
         </motion.div>
+        </Link>
         <motion.div
           key="animation-tabasco"
           className={styles.TabascoWrapper}
@@ -262,13 +269,6 @@ const HomeAnimation = (props) => {
             />
           </div>
         </motion.div>
-        <div key="animation-siteheader" className={styles.SiteHeaderWrapper}>
-          <h1 className={styles.Siteheader}>
-            <TypeIt options={{ cursor: false }}>
-              studio suzan schapendonk
-            </TypeIt>
-          </h1>
-        </div>
         <motion.div
           key="animation-lijn3"
           className={styles.Lijn3Wrapper}
@@ -503,7 +503,6 @@ const HomeAnimation = (props) => {
             />
           </div>
         </motion.div>
-      </AnimatePresence>
     </div>
   );
 };

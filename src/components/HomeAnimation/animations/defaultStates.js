@@ -8,6 +8,9 @@ const loadingState = {
   const exitState = {
     y: "100vh",
     opacity: 0,
+    transition: {
+      duration: 1,
+    },
   };
 
   export {loadingState, exitState};

@@ -1,18 +1,14 @@
-import { NextSeo } from "next-seo";
-import styles from "@/styles/Home.module.scss";
+import styles from "@/styles/Home.module.scss"
 
-import HomeAnimation from "@/components/HomeAnimation/HomeAnimation";
+import Layout from "@/components/Layout/Layout"
+import HomeAnimation from "@/components/HomeAnimation/HomeAnimation"
 
 const Home = (props) => {
   return (
     <div className={styles.container}>
-      <NextSeo
-        title="Studio Suzan Schapendonk"
-        description="Studio Suzan Schapendonk: illustratie + ontwerp"
-        canonical="https://suzanschapendonk.nl"
-      />
-
-      <HomeAnimation />
+      <Layout  title="Studio Suzan Schapendonk"  description="Studio Suzan Schapendonk: illustratie + ontwerp" canonical="https://suzanschapendonk.nl" route={props.route}>
+        <HomeAnimation />
+      </Layout>
     </div>
   );
 };

@@ -269,12 +269,11 @@ $animationWidthMegaLarge: 40vw;
     @include image-size-position($width, $height, $left, $top);
   }
 
-  .SiteHeaderWrapper {
-    $width: 82;
-    $height: 7.5;
-    $left: 18;
-    $top: 36;
-    h1 {
+    h1.SiteHeader {
+      $width: 82;
+      $height: 7.5;
+      $left: 18;
+      $top: 36;
       font-family: "itc-american-typewriter";
       font-weight: 700;
       font-size: calc(0.055 * $animationWidth);
@@ -285,9 +284,9 @@ $animationWidthMegaLarge: 40vw;
       @media (min-width: 1900px) {
         font-size: calc(0.055 * $animationWidthMegaLarge);
       }
+      @include image-size-position($width, $height, $left, $top);
     }
-    @include image-size-position($width, $height, $left, $top);
-  }
+
 
   div.img {
     position: relative;
