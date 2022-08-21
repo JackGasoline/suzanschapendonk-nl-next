@@ -63,11 +63,6 @@ const HomeAnimation = (props) => {
 
   return (
     <div className={styles.container}>
-      <motion.h1 className={styles.SiteHeader} layoutId="title">
-        <TypeIt options={{ cursor: false }}>
-          studio suzan schapendonk
-        </TypeIt>
-      </motion.h1>
       <Link href="/mijnwerk" passHref>
         <motion.div
           key="animation-worcestershiresauce"

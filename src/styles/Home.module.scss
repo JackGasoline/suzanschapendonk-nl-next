@@ -119,16 +119,22 @@
   cursor: pointer;
 }
 
-.imageContainer div:first-child {
-  display: flex;
+.imageContainer {
   width: 100%;
-  flex-wrap: wrap;
-  position: absolute;
+}
+
+.imageContainer div:first-child {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12.8vw);
+  justify-content: space-between;
+  grid-gap: 0.5vw;
 
   .workimage {
     display: block;
     position: relative;
-    width: 22vw;
-    height: 22vw;
+    width: 12.8vw;
+    height: 12.8vw;
+    margin-top: 0.5vw;
+    border: 1px solid lightgray;
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { NextSeo, ProfilePageJsonLd } from 'next-seo'
 import { motion } from 'framer-motion'
+import Menu from '../Menu/Menu'
 import TypedHeader from '../TypedHeader/TypedHeader'
 
 const variants = {
@@ -13,6 +14,7 @@ const Layout = ({ children, title, description, canonical, route }) => (
     <div>
         <NextSeo title={title} description={description} canonical={canonical} openGraph={{ title, description }} />
         <TypedHeader route={route} />
+        <Menu />
         <motion.main
             initial="hidden"
             animate="enter"

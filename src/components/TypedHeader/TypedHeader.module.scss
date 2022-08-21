@@ -25,8 +25,8 @@ $animationWidthMegaLarge: 40vw;
 h1.SiteHeaderMain {
     $width: 82;
     $height: 7.5;
-    $left: 18;
-    $top: 36;
+    $left: 90.5;
+    $top: 77.5;
     font-family: "itc-american-typewriter";
     font-weight: 700;
     font-size: calc(0.055 * $animationWidth);
@@ -38,12 +38,13 @@ h1.SiteHeaderMain {
       font-size: calc(0.055 * $animationWidthMegaLarge);
     }
     @include image-size-position($width, $height, $left, $top);
+    z-index: 10;
   }
 
 h1.SiteHeaderSub {
     $width: 82;
     $height: 7.5;
-    $left: 160;
+    $left: 165;
     $top: 160;
     font-family: "itc-american-typewriter";
     font-weight: 700;
@@ -56,4 +57,19 @@ h1.SiteHeaderSub {
       font-size: calc(0.055 * $animationWidthMegaLarge);
     }
     @include image-size-position($width, $height, $left, $top);
+    margin-top: 93vh !important;
+    z-index: 10;
+  }
+
+  h1.PageHeader {
+    font-family: "itc-american-typewriter";
+    font-weight: 700;
+    font-size: calc(0.055 * $animationWidth);
+    color: black;
+    @media (min-width: 1400px) {
+      font-size: calc(0.055 * $animationWidthLarger);
+    }
+    @media (min-width: 1900px) {
+      font-size: calc(0.055 * $animationWidthMegaLarge);
+    }
   }

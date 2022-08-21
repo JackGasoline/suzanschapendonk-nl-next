@@ -22,25 +22,9 @@ $animationWidthMegaLarge: 40vw;
   }
 }
 
-h1.SiteHeader {
-  $width: 82;
-  $height: 7.5;
-  $left: 160;
-  $top: 160;
-  font-family: "itc-american-typewriter";
-  font-weight: 700;
-  font-size: calc(0.055 * $animationWidth);
-  color: black;
-  @media (min-width: 1400px) {
-    font-size: calc(0.055 * $animationWidthLarger);
-  }
-  @media (min-width: 1900px) {
-    font-size: calc(0.055 * $animationWidthMegaLarge);
-  }
-  @include image-size-position($width, $height, $left, $top);
-}
-
 .container {
+  margin: 14vw;
+  width: 72vw;
   padding: 0 2rem;
 }
 
@@ -168,21 +152,21 @@ h1.SiteHeader {
 }
 
 .imageContainer {
-  display: flex;
   width: 100%;
-  flex-wrap: wrap;
-
-  .workimage {
-    width: 25%;
-    span {
-      position: initial !important;
-    }
-  }
-
-  .imageWorkimage {
-    width: 100% !important;
-    height: auto !important;
-    position: relative !important;
-  }
 }
 
+.imageContainer div:first-child {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12.8vw);
+  justify-content: space-between;
+  grid-gap: 0.5vw;
+
+  .workimage {
+    display: block;
+    position: relative;
+    width: 12.8vw;
+    height: 12.8vw;
+    margin-top: 0.5vw;
+    border: 1px solid lightgray;
+  }
+}

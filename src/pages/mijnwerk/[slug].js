@@ -5,11 +5,13 @@ import axios from "axios";
 import { decode } from "html-entities";
 import TypeIt from "typeit-react";
 import { SRLWrapper } from "simple-react-lightbox";
-import styles from "@/styles/Home.module.scss";
-import moreStyles from "./Mijnwerk.module.scss";
+import baseStyles from "@/styles/Home.module.scss";
+import styles from "./Mijnwerk.module.scss";
+import Layout from "@/components/Layout/Layout";
+import TypedHeaderBasic from "@/components/TypedHeader/TypedHeaderBasic";
 import WorkImage from "@/components/WorkImage/WorkImage";
 
-const fetchData = async (url) =>
+const fetchData = async (url) => 
   await axios
     .get(url)
     .then((res) => ({
@@ -23,22 +25,12 @@ const fetchData = async (url) =>
 
 const Home = (props) => {
   return (
+    <Layout title={decode(props.pageData[0].title.rendered)} route={props.route}>
     <div className={styles.container}>
-      <NextSeo
-        title={
-          props.pageData[0]
-            ? decode(props.pageData[0].title.rendered)
-            : undefined
-        }
-      />
 
       {props.pageData[0] && (
         <div>
-          <h1 className={moreStyles.mijnWerkHeader}>
-            <TypeIt options={{ cursor: false }}>
-              {decode(props.pageData[0].title.rendered)}
-            </TypeIt>
-          </h1>
+          <TypedHeaderBasic title={decode(props.pageData[0].title.rendered)} />
           <div
             dangerouslySetInnerHTML={{
               __html: props.pageData[0].content.rendered,
@@ -47,31 +39,29 @@ const Home = (props) => {
         </div>
       )}
       {props.pageData[0].acf && (
-        <div className={styles.imageContainer}>
+        <div className={baseStyles.imageContainer}>
           <SRLWrapper>
-            {props.pageData[0] &&
-              Object.keys(props.pageData[0].acf).map((key, i) => (
-                <a
-                  href={props.pageData[0].acf[key].url}
-                  key={`workitem${i}`}
-                  className={styles.workimage}
-                >
+            {Object.keys(props.pageData[0].acf).map((key, i) => (
+                <>
                   {props.pageData[0].acf[key].sizes && (
+                    <a href={props.pageData[0].acf[key].url} key={`workitem${i}`} className={baseStyles.workimage}>
                     <Image
                       alt={props.pageData[0].acf[key].alt}
                       src={props.pageData[0].acf[key].sizes.large}
                       key={props.pageData[0].acf[key].ID}
                       layout="fill"
                       objectFit="contain"
-                      sizes="25vw"
+                      sizes="12.8vw"
                     />
+                    </a>
                   )}
-                </a>
+                </>
               ))}
           </SRLWrapper>
         </div>
       )}
     </div>
+    </Layout>
   );
 };
 
