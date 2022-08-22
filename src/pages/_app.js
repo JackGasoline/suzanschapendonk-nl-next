@@ -3,9 +3,11 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 import SEO from '@/next-seo.config'
 import '@/styles/app.scss'
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
+import { useKeyboardNavigationDetection } from '@/hooks/useKeyboardNavigationDetection';
 
 function MyApp({ Component, pageProps, router }) {
-  console.log(router.route) 
+
+  useKeyboardNavigationDetection();
 
   return (
     <SimpleReactLightbox>
