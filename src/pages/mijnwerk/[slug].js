@@ -39,12 +39,12 @@ const Home = (props) => {
         </div>
       )}
       {props.pageData[0].acf && (
-        <div className={baseStyles.imageContainer}>
+        <div className={styles.imageContainer}>
           <SRLWrapper>
             {Object.keys(props.pageData[0].acf).map((key, i) => (
-                <Fragment key={`fragment_${i}`}>
+                <div className={styles.imageItem} key={`imageitem${i}`}>
                   {props.pageData[0].acf[key].sizes && (
-                    <a href={props.pageData[0].acf[key].url} key={`workitem${i}`} className={baseStyles.workimage}>
+                    <a href={props.pageData[0].acf[key].url} key={`workitem${i}`} className={styles.workimage}>
                     <Image
                       alt={props.pageData[0].acf[key].alt}
                       src={props.pageData[0].acf[key].sizes.large}
@@ -55,7 +55,7 @@ const Home = (props) => {
                     />
                     </a>
                   )}
-                </Fragment>
+                </div>
               ))}
           </SRLWrapper>
         </div>

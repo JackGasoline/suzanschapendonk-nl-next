@@ -15,6 +15,7 @@ const Layout = ({ children, title, description, canonical, route }) => (
     <div>
         <NextSeo title={title} description={description} canonical={canonical} openGraph={{ title, description }} />
         <TypedHeader route={route} />
+        <div className={styles.topGradient} />
         <Menu />
         <motion.main
             initial="hidden"

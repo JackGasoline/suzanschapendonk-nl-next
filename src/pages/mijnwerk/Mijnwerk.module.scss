@@ -23,14 +23,21 @@ $animationWidthMegaLarge: 40vw;
 }
 
 .container {
-  margin: 14vw;
+  margin-left: 14vw;
+  margin-top: 14vw;
   width: 72vw;
-  padding: 0 2rem;
+  padding-bottom: 10vh;
   @media (min-width: 1400px) {
     margin-top: 10vw;
   }
   @media (min-width: 1900px) {
     margin-top: 8vw;
+  }
+
+  @media (max-width: 756px) {
+    margin-top: 22vw;
+    margin-left: 10vw;
+    width: 80vw;
   }
 }
 
@@ -173,6 +180,11 @@ $animationWidthMegaLarge: 40vw;
   @media (min-width: 1900px) {
     grid-template-columns: repeat(auto-fill, 12.8vw);
   }
+  @media (max-width: 756px) {
+    grid-template-columns: repeat(auto-fill, 38vw);
+    grid-gap: 1vw;
+  }
+
   :hover {
     background-color: lightgray;
   }
@@ -200,6 +212,10 @@ $animationWidthMegaLarge: 40vw;
     @media (min-width: 1900px) {
       width: 12.8vw;
       height: 12.8vw;
+    }
+    @media (max-width: 756px) {
+      width: 38vw;
+      height: 38vw;
     }
     margin-top: 0.5vw;
     border: 1px solid lightgray;

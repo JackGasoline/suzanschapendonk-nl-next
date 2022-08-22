@@ -31,6 +31,10 @@ body {
   @supports (-webkit-touch-callout: none) {
     height: 100vh;
   }
+
+  @media (max-width: 756px) {
+    font-size: 1.8rem;
+  }
 }
 
 #__next {
@@ -118,4 +122,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.SRLCaptionContainer {
+  padding-top: 0 !important;
+  margin-top: -50px;
+}
+
+.SRLCaptionText {
+  font-size: 2.2rem !important;
 }
