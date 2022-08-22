@@ -44,12 +44,16 @@ const Home = props => {
     <div className={styles.imageContainer}>
       <div>
       {props.pageItems.map((post) => (
-          <div key={post.id}>
+          <div className={styles.imageItem} key={post.id}>
             <Link href={`/mijnwerk/${post.slug}`} passHref>
-            <a className={styles.workimage}>{post.acf['afbeelding_1'].sizes.woocommerce_single && <Image src={post.acf['afbeelding_1'].sizes.woocommerce_single} alt={post.acf['afbeelding_1'].alt}                       layout="fill"
-                      objectFit="contain"
-                      sizes="12.8vw" />}
-            </a>
+            <a className={styles.workimage}>{post.acf['afbeelding_1'].sizes.woocommerce_single && 
+              <Image src={post.acf['afbeelding_1'].sizes.woocommerce_single} alt={post.acf['afbeelding_1'].alt}                       
+                layout="fill"
+                objectFit="contain"
+                sizes="12.8vw" />}
+            </a></Link>
+            <Link href={`/mijnwerk/${post.slug}`} passHref>
+              <a className={styles.workLinkText}>{`${decode(post.title.rendered)}`}</a>
             </Link>
           </div>
         ))}
@@ -61,7 +65,10 @@ const Home = props => {
 }
 
 export const getServerSideProps = async () => {
-  const data = await getAllData(["https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/27","https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?categories=17&orderby=title"]);
+  const data = await getAllData([
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/27?_fields[]=title&_fields[]=content",
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?categories=17&orderby=date&_fields[]=id&_fields[]=title&_fields[]=slug&_fields[]=acf.afbeelding_1.id&_fields[]=acf.afbeelding_1.title&_fields[]=acf.afbeelding_1.url&_fields[]=acf.afbeelding_1.sizes.woocommerce_single&_fields[]=acf.afbeelding_1.alt&per_page=25",
+  ]);
 
   return {
     props: {

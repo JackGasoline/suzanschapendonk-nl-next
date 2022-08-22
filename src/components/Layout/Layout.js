@@ -3,6 +3,7 @@ import { NextSeo, ProfilePageJsonLd } from 'next-seo'
 import { motion } from 'framer-motion'
 import Menu from '../Menu/Menu'
 import TypedHeader from '../TypedHeader/TypedHeader'
+import styles from './Layout.module.scss'
 
 const variants = {
     hidden: { opacity: 0, y: 0 },
@@ -24,6 +25,7 @@ const Layout = ({ children, title, description, canonical, route }) => (
         >
             {children}
         </motion.main>
+        <div className={styles.bottomGradient} />
     </div>
 )
 

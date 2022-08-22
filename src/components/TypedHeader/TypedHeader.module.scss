@@ -2,63 +2,65 @@ $animationWidth: 90vw;
 $animationWidthLarger: 60vw;
 $animationWidthMegaLarge: 40vw;
 
-@mixin image-size-position($width, $height, $left, $top) {
-  position: absolute;
-  width: calc($width / 100 * $animationWidth);
-  height: calc($height / 100 * $animationWidth);
+@mixin image-size-position($width) {
+
+  left: 0;
   margin-left: calc($left / 100 * $animationWidth);
-  margin-top: calc($top / 100 * $animationWidth);
   @media (min-width: 1400px) {
     width: calc($width / 100 * $animationWidthLarger);
-    height: calc($height / 100 * $animationWidthLarger);
     margin-left: calc($left / 100 * $animationWidthLarger);
-    margin-top: calc($top / 100 * $animationWidthLarger);
   }
   @media (min-width: 1900px) {
     width: calc($width / 100 * $animationWidthMegaLarge);
-    height: calc($height / 100 * $animationWidthMegaLarge);
     margin-left: calc($left / 100 * $animationWidthMegaLarge);
-    margin-top: calc($top / 100 * $animationWidthMegaLarge);
   }
 }
 
 h1.SiteHeaderMain {
-    $width: 82;
-    $height: 7.5;
-    $left: 95;
-    $top: 81;
+    position: fixed;
     font-family: "itc-american-typewriter";
     font-weight: 700;
     font-size: calc(0.055 * $animationWidth);
     color: black;
+    margin-left: calc(50vw - $animationWidth/2 + 0.2*$animationWidth);
+    margin-top: calc(49.8vh - $animationWidth/2 + 0.365*$animationWidth);
     @media (min-width: 1400px) {
       font-size: calc(0.055 * $animationWidthLarger);
+      margin-left: calc(50vw - $animationWidthLarger/2 + 0.2*$animationWidthLarger);
+      margin-top: calc(55vh - 0.137 * $animationWidthLarger);
+      width: 0.75 * $animationWidthLarger;
     }
     @media (min-width: 1900px) {
       font-size: calc(0.055 * $animationWidthMegaLarge);
+      margin-left: calc(50vw - $animationWidthMegaLarge/2 + 0.2*$animationWidthMegaLarge);
+      margin-top: calc(55vh - 0.137 * $animationWidthMegaLarge);
+      width: 0.75 * $animationWidthMegaLarge;
+
     }
-    @include image-size-position($width, $height, $left, $top);
     z-index: 10;
+    display: block;
+    width: 0.75 * $animationWidth;
   }
 
 h1.SiteHeaderSub {
-    $width: 82;
-    $height: 7.5;
-    $left: 170;
-    $top: 160;
+    position: fixed;
     font-family: "itc-american-typewriter";
     font-weight: 700;
     font-size: calc(0.055 * $animationWidth);
     color: black;
     @media (min-width: 1400px) {
       font-size: calc(0.055 * $animationWidthLarger);
+      width: 0.75 * $animationWidthLarger;
     }
     @media (min-width: 1900px) {
       font-size: calc(0.055 * $animationWidthMegaLarge);
+      width: 0.75 * $animationWidthMegaLarge;
     }
-    @include image-size-position($width, $height, $left, $top);
-    margin-top: 93vh !important;
+    right: 3vw;
+    bottom: 1vw;
     z-index: 10;
+    display: block;
+    width: 0.75 * $animationWidth;
   }
 
   h1.PageHeader {

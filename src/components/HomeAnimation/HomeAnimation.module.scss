@@ -37,14 +37,14 @@ $animationWidthMegaLarge: 40vw;
     width: $animationWidthLarger;
     height: calc(0.75 * $animationWidthLarger);
     left: calc((100vw - $animationWidthLarger) / 2);
-    top: calc(50% - $animationWidthLarger/2 + 5%);
+    top: calc(55vh - $animationWidthLarger/2);
   }
 
   @media (min-width: 1900px) {
     width: $animationWidthMegaLarge;
     height: calc(0.75 * $animationWidthMegaLarge);
     left: calc((100vw - $animationWidthMegaLarge) / 2);
-    top: calc(50% - $animationWidthMegaLarge/2 + 5%);
+    top: calc(55vh - $animationWidthMegaLarge/2);
   }
 
   .WorcestershiresauceWrapper {

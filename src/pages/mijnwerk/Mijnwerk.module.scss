@@ -26,6 +26,12 @@ $animationWidthMegaLarge: 40vw;
   margin: 14vw;
   width: 72vw;
   padding: 0 2rem;
+  @media (min-width: 1400px) {
+    margin-top: 10vw;
+  }
+  @media (min-width: 1900px) {
+    margin-top: 8vw;
+  }
 }
 
 .main {
@@ -153,20 +159,53 @@ $animationWidthMegaLarge: 40vw;
 
 .imageContainer {
   width: 100%;
+  margin-top: 30px;
 }
 
 .imageContainer div:first-child {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 12.8vw);
+  grid-template-columns: repeat(auto-fill, 21vw);
   justify-content: space-between;
   grid-gap: 0.5vw;
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(auto-fill, 16vw);
+  }
+  @media (min-width: 1900px) {
+    grid-template-columns: repeat(auto-fill, 12.8vw);
+  }
+  :hover {
+    background-color: lightgray;
+  }
+
+  .imageItem {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .workLinkText {
+    display: block;
+    padding: 3% 5%;
+  }
 
   .workimage {
     display: block;
     position: relative;
-    width: 12.8vw;
-    height: 12.8vw;
+    width: 21vw;
+    height: 21vw;
+    @media (min-width: 1400px) {
+      width: 16vw;
+      height: 16vw;
+    }
+    @media (min-width: 1900px) {
+      width: 12.8vw;
+      height: 12.8vw;
+    }
     margin-top: 0.5vw;
     border: 1px solid lightgray;
+  }
+
+  img {
+    padding: 3% !important;
   }
 }
