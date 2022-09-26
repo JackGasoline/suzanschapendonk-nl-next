@@ -1,4 +1,5 @@
 import { DefaultSeo } from 'next-seo'
+import Head from 'next/head'
 import SimpleReactLightbox from 'simple-react-lightbox'
 import SEO from '@/next-seo.config'
 import '@/styles/app.scss'
@@ -10,12 +11,17 @@ function MyApp({ Component, pageProps, router }) {
   useKeyboardNavigationDetection();
 
   return (
-    <SimpleReactLightbox>
-      <DefaultSeo {...SEO} />
-      <AnimateSharedLayout exitBeforeEnter>
-        <Component {...pageProps} route={router.route} />
-      </AnimateSharedLayout>
-    </SimpleReactLightbox>
+    <>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <SimpleReactLightbox>
+        <DefaultSeo {...SEO} />
+        <AnimateSharedLayout exitBeforeEnter>
+          <Component {...pageProps} route={router.route} />
+        </AnimateSharedLayout>
+      </SimpleReactLightbox>
+    </>
   )
 }
 

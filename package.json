@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-hook/media-query": "^1.1.1",
     "axios": "^0.25.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "follow-redirects": "^1.14.8",
