@@ -26,8 +26,14 @@ const fetchData = async (url) =>
 
 const Blog = (props) => {
   let dataParsed = null;
-  let imageWidth = useRef(20);
   const windowWidth = useWindowWidth();
+  let imageWidth = useRef(20);
+  if (windowWidth < 780 && windowWidth > 0) {
+    imageWidth.current = 40;
+  }
+  if (windowWidth > 3000) {
+     imageWidth.current = 12;
+  }
   let counter = 1;
 
   if(props.pageData[0].content.rendered) {
