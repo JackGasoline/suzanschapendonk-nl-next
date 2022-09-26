@@ -9,6 +9,7 @@ const Menu = () => {
             <li><Link href='/' passHref>Home</Link></li>
             <li><Link href='/mijnwerk' passHref>Mijn werk</Link></li>
             <li><Link href='/contact' passHref>Contact</Link></li>
+            <li><Link href='/inspiratieblog' passHref>Inspiratieblog</Link></li> 
             <li><Link href='/prints' passHref>Prints</Link></li>
             <li><Link href='/overmij' passHref>Over mij</Link></li>
             </ul>
