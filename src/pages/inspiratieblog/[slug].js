@@ -33,13 +33,13 @@ const Blog = (props) => {
   let imageWidth = 20;
   const windowWidth = useWindowWidth();
   console.log(windowWidth);
-  if (windowWidth < 780 && windowWidth > 0) {
+  if (windowWidth < 780) {
     imageWidth = 40;
   }
   let counter = 1;
 
   const ContentNode = dataParsed.map((item, i) => {
-    const thisItem = item.trim().replaceAll('*','');
+    const thisItem = item.trim().replace(/\*/g,'');
 
     if(thisItem==='imageLeft' || thisItem==='imageRight') {
         const thisCounter = counter;
