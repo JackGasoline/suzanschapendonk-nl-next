@@ -28,12 +28,6 @@ const Blog = (props) => {
   let dataParsed = null;
   const windowWidth = useWindowWidth();
   let imageWidth = useRef(20);
-  if (windowWidth < 780 && windowWidth > 0) {
-    imageWidth.current = 40;
-  }
-  if (windowWidth > 3000) {
-     imageWidth.current = 12;
-  }
   let counter = 1;
 
   if(props.pageData[0].content.rendered) {
@@ -47,6 +41,14 @@ const Blog = (props) => {
         imageWidth.current = 12;
     }
   }, [windowWidth]);
+  useEffect(() => {
+    if (window.innerWidth < 780) {
+        imageWidth.current = 40;
+    }
+    if (window.innerWidth > 3000) {
+        imageWidth.current = 12;
+    }
+  }, []);
 
   const ContentNode = dataParsed.map((item, i) => {
     const thisItem = item.trim().replace(/\*/g,'');
