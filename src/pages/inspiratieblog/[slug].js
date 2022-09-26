@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
 import axios from "axios";
@@ -26,17 +26,21 @@ const fetchData = async (url) =>
 
 const Blog = (props) => {
   let dataParsed = null;
+  let imageWidth = useRef(20);
+  const windowWidth = useWindowWidth();
+  let counter = 1;
 
   if(props.pageData[0].content.rendered) {
     dataParsed = props.pageData[0].content.rendered.replace(/<\/p>/g,'').replace(/\n/g,'').split('<p>');
   }
-  let imageWidth = 20;
-  const windowWidth = useWindowWidth();
-  console.log(windowWidth);
-  if (windowWidth < 780) {
-    imageWidth = 40;
-  }
-  let counter = 1;
+  useEffect(() => {
+    if (windowWidth < 780 && windowWidth > 0) {
+        imageWidth.current = 40;
+    }
+    if (windowWidth > 3000) {
+        imageWidth.current = 12;
+    }
+  }, [windowWidth]);
 
   const ContentNode = dataParsed.map((item, i) => {
     const thisItem = item.trim().replace(/\*/g,'');
@@ -48,8 +52,8 @@ const Blog = (props) => {
 
             const aspectratio= props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-height']/props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-width']
             const divStyle = {
-                width: `${imageWidth}vw`,
-                height: `${imageWidth*aspectratio}vw`
+                width: `${imageWidth.current}vw`,
+                height: `${imageWidth.current*aspectratio}vw`
            }
 
             return (

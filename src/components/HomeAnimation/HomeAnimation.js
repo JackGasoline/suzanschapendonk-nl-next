@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 import Link from 'next/link'
 import TypeIt from "typeit-react"
@@ -37,7 +37,7 @@ import { TabascoAnimation, WorcestershiresauceAnimation, SambalAnimation, KipAni
 const HomeAnimation = (props) => {
   const [animationStatus, setAnimationStatus] = useState("loading");
   const [imagesLoaded, setImagesLoaded] = useState(0);
-  let animationTimer;
+  let animationTimer = useRef(null);
 
   const startTheAnimation = () => {
     setAnimationStatus("visible");
@@ -51,7 +51,7 @@ const HomeAnimation = (props) => {
   useEffect(() => {
     if (imagesLoaded > 23) {
       setAnimationStatus("hidden");
-      animationTimer = setTimeout(() => {
+      animationTimer.current = setTimeout(() => {
         startTheAnimation();
       }, 100);
     }

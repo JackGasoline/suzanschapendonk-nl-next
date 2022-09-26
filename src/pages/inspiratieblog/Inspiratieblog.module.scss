@@ -33,6 +33,14 @@ $animationWidthMegaLarge: 40vw;
   @media (min-width: 1900px) {
     margin-top: 8vw;
   }
+  @media (min-width: 2100px) {
+    margin-left: 25vw;
+    width: 50vw;
+  }
+  @media (min-width: 3000px) {
+    margin-left: 35vw;
+    width: 30vw;
+  }
 
   @media (max-width: 756px) {
     margin-top: 22vw;

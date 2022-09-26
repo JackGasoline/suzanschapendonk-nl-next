@@ -44,23 +44,27 @@ h1.SiteHeaderMain {
 
 h1.SiteHeaderSub {
     position: fixed;
+    z-index: 10;
+    display: block;
     font-family: "itc-american-typewriter";
     font-weight: 700;
-    font-size: calc(0.055 * $animationWidth);
     color: black;
+    right: calc(0.03 * $animationWidth);
+    bottom:  calc(0.011 * $animationWidth);
+    font-size: calc(0.055 * $animationWidth);
+    width: 0.77 * $animationWidth;
     @media (min-width: 1400px) {
       font-size: calc(0.055 * $animationWidthLarger);
       width: 0.75 * $animationWidthLarger;
+      bottom:  calc(0.011 * $animationWidthLarger);
+      right: calc(0.03 * $animationWidthLarger);
     }
     @media (min-width: 1900px) {
       font-size: calc(0.055 * $animationWidthMegaLarge);
       width: 0.75 * $animationWidthMegaLarge;
+      bottom:  calc(0.011 * $animationWidthMegaLarge);
+      right: calc(0.03 * $animationWidthMegaLarge);
     }
-    right: 3vw;
-    bottom: 1vw;
-    z-index: 10;
-    display: block;
-    width: 0.77 * $animationWidth;
   }
 
   h1.PageHeader {

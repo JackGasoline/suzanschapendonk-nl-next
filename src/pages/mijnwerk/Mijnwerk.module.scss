@@ -34,6 +34,10 @@ $animationWidthMegaLarge: 40vw;
     margin-top: 8vw;
   }
 
+  @media (min-width: 3000px) {
+    margin-top: 5vw;
+  }
+
   @media (max-width: 756px) {
     margin-top: 22vw;
     margin-left: 10vw;
