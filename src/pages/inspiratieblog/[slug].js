@@ -27,23 +27,24 @@ const fetchData = async (url) =>
 const Blog = (props) => {
   let dataParsed = null;
   const windowWidth = useWindowWidth();
-  let imageWidth = useRef(20);
+  let imageWidth = useRef(40);
   let counter = 1;
 
   if(props.pageData[0].content.rendered) {
     dataParsed = props.pageData[0].content.rendered.replace(/<\/p>/g,'').replace(/\n/g,'').split('<p>');
   }
   useEffect(() => {
-    if (windowWidth < 780 && windowWidth > 0) {
-        imageWidth.current = 40;
+    if (windowWidth > 780) {
+        imageWidth.current = 20;
     }
     if (windowWidth > 3000) {
         imageWidth.current = 12;
     }
   }, [windowWidth]);
+  
   useEffect(() => {
-    if (window.innerWidth < 780) {
-        imageWidth.current = 40;
+    if (window.innerWidth > 780) {
+        imageWidth.current = 20;
     }
     if (window.innerWidth > 3000) {
         imageWidth.current = 12;
