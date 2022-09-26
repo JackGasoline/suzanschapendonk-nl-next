@@ -10,7 +10,7 @@ import styles from "./Inspiratieblog.module.scss";
 import Layout from "@/components/Layout/Layout";
 import TypedHeaderBasic from "@/components/TypedHeader/TypedHeaderBasic";
 import WorkImage from "@/components/WorkImage/WorkImage";
-import {useMediaQuery} from '@react-hook/media-query'
+import { useWindowWidth } from '@react-hook/window-size/throttled'
 
 const fetchData = async (url) => 
   await axios
@@ -25,10 +25,15 @@ const fetchData = async (url) =>
     }));
 
 const Blog = (props) => {
-  const dataParsed = props.pageData[0].content.rendered.replaceAll('</p>','').replaceAll(/\n/g,'').split('<p>');
+  let dataParsed = null;
+
+  if(props.pageData[0].content.rendered) {
+    dataParsed = props.pageData[0].content.rendered.replace(/<\/p>/g,'').replace(/\n/g,'').split('<p>');
+  }
   let imageWidth = 20;
-  const matches = useMediaQuery("only screen and (max-width: 780px)");
-  if (matches) {
+  const windowWidth = useWindowWidth();
+  console.log(windowWidth);
+  if (windowWidth < 780 && windowWidth > 0) {
     imageWidth = 40;
   }
   let counter = 1;
