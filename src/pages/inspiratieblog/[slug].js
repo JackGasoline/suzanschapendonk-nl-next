@@ -33,6 +33,8 @@ const Blog = (props) => {
   if(props.pageData[0].content.rendered) {
     dataParsed = props.pageData[0].content.rendered.replace(/<\/p>/g,'').replace(/\n/g,'').split('<p>');
   }
+
+
   useEffect(() => {
     if (windowWidth > 780) {
         imageWidth.current = 20;
@@ -41,15 +43,6 @@ const Blog = (props) => {
         imageWidth.current = 12;
     }
   }, [windowWidth]);
-  
-  useEffect(() => {
-    if (window.innerWidth > 780) {
-        imageWidth.current = 20;
-    }
-    if (window.innerWidth > 3000) {
-        imageWidth.current = 12;
-    }
-  }, []);
 
   const ContentNode = dataParsed.map((item, i) => {
     const thisItem = item.trim().replace(/\*/g,'');
@@ -59,22 +52,26 @@ const Blog = (props) => {
         if(props.pageData[0].acf['afbeelding_'+thisCounter]) {
             counter ++;
 
-            const aspectratio= props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-height']/props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-width']
+            const aspectratio = 100 * props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-height'] / props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-width']
+
             const divStyle = {
-                width: `${imageWidth.current}vw`,
-                height: `${imageWidth.current*aspectratio}vw`
+                width: "100%",
+                //height: `${imageWidth.current*aspectratio}vw`
+                paddingTop: `${aspectratio}%`,
+                display: "block"
            }
 
             return (
-                <span className={thisItem == 'imageLeft' ? styles.imageLeft : styles.imageRight} key={'imagespan' + i} style={ divStyle }>
-                <Image
-                alt={props.pageData[0].acf['afbeelding_'+thisCounter].alt}
-                src={props.pageData[0].acf['afbeelding_'+thisCounter].sizes.large}
-                key={i + 'inline' + props.pageData[0].acf['afbeelding_'+thisCounter].ID}
-                layout="fill"
-                objectFit="contain"
-                sizes="`${imageWidth}vw`"
-            />
+            <span className={thisItem == 'imageLeft' ? styles.imageLeft : styles.imageRight}>
+                <span style={ divStyle }>
+                    <Image
+                    alt={props.pageData[0].acf['afbeelding_'+thisCounter].alt}
+                    src={props.pageData[0].acf['afbeelding_'+thisCounter].sizes.large}
+                    key={i + 'inline' + props.pageData[0].acf['afbeelding_'+thisCounter].ID}
+                    layout="fill"
+                    objectFit="contain"
+                    sizes="`${imageWidth}vw`" />
+                </span>
             </span>)
         }
     }
