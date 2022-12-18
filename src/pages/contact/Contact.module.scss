@@ -1,0 +1,74 @@
+.container {
+  margin-left: 14vw;
+  margin-top: 14vw;
+  width: 72vw;
+  padding-bottom: 10vh;
+  @media (min-width: 1400px) {
+    margin-top: 10vw;
+  }
+  @media (min-width: 1900px) {
+    margin-top: 8vw;
+  }
+  @media (min-width: 2100px) {
+    margin-left: 25vw;
+    width: 50vw;
+  }
+  @media (min-width: 3000px) {
+    margin-left: 35vw;
+    width: 30vw;
+    margin-top: 5vw;
+  }
+  @media (max-width: 756px) {
+    margin-top: 110px;
+    margin-left: 10vw;
+    width: 80vw;
+  }
+
+  form {
+    width: 800px;
+    height: 30vh;
+    display: block;
+
+    @media (max-width: 1000px) {
+      width: 100%
+    }
+
+    label {
+      display: block;
+      width: 100%;
+      float: left;
+      clear: both;
+      margin-top: 20px;
+      span {
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+      }
+      input, textarea {
+        width: 80%;
+        padding:10px;
+        border: 1px solid black;
+        border-radius:10px;
+      }
+      textarea {
+        height: 17vh !important;
+      }
+    }
+    button {
+      display: block;
+      float: right;
+      clear: both;
+      border: 1px solid black;
+      border-radius:10px;
+      background-color: #018387;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 500;
+      letter-spacing:1px;
+      margin-top: 30px;
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}

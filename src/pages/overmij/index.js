@@ -30,8 +30,8 @@ const Blog = (props) => {
   let imageWidth = useRef(40);
   let counter = 1;
 
-  if(props.pageData[0].content.rendered) {
-    dataParsed = props.pageData[0].content.rendered.replace(/<\/p>/g,'').replace(/\n/g,'').split('<p>');
+  if(props.pageData.content.rendered) {
+    dataParsed = props.pageData.content.rendered.replace(/<\/p>/g,'').replace(/\n/g,'').split('<p>');
   }
 
 
@@ -49,10 +49,10 @@ const Blog = (props) => {
 
     if(thisItem==='imageLeft' || thisItem==='imageRight') {
         const thisCounter = counter;
-        if(props.pageData[0].acf['afbeelding_'+thisCounter]) {
+        if(props.pageData.acf['afbeelding_'+thisCounter]) {
             counter ++;
 
-            const aspectratio = 100 * props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-height'] / props.pageData[0].acf['afbeelding_'+thisCounter].sizes['large-width']
+            const aspectratio = 100 * props.pageData.acf['afbeelding_'+thisCounter].sizes['large-height'] / props.pageData.acf['afbeelding_'+thisCounter].sizes['large-width']
 
             const divStyle = {
                 width: "100%",
@@ -64,9 +64,9 @@ const Blog = (props) => {
             <span key={i} className={thisItem == 'imageLeft' ? styles.imageLeft : styles.imageRight}>
                 <span style={ divStyle }>
                     <Image
-                    alt={props.pageData[0].acf['afbeelding_'+thisCounter].alt}
-                    src={props.pageData[0].acf['afbeelding_'+thisCounter].sizes.large}
-                    key={i + 'inline' + props.pageData[0].acf['afbeelding_'+thisCounter].ID}
+                    alt={props.pageData.acf['afbeelding_'+thisCounter].alt}
+                    src={props.pageData.acf['afbeelding_'+thisCounter].sizes.large}
+                    key={i + 'inline' + props.pageData.acf['afbeelding_'+thisCounter].ID}
                     layout="fill"
                     objectFit="contain"
                     sizes="`${imageWidth}vw`" />
@@ -83,12 +83,12 @@ const Blog = (props) => {
 
 
   return (
-    <Layout title={decode(props.pageData[0].title.rendered)} route={props.route}>
+    <Layout title={decode(props.pageData.title.rendered)} route={props.route}>
     <div className={styles.container}>
 
-      {props.pageData[0] && (
+      {props.pageData && (
         <div>
-          <TypedHeaderBasic title={decode(props.pageData[0].title.rendered)} />
+          <TypedHeaderBasic title={decode(props.pageData.title.rendered)} />
            {ContentNode}
 
         </div>
@@ -100,7 +100,7 @@ const Blog = (props) => {
 
 export const getServerSideProps = async ({ params }) => {
   const data = await fetchData(
-    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/474"
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/2"
   );
 
   return {
