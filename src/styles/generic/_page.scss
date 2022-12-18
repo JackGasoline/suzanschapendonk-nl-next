@@ -8,6 +8,10 @@ html {
 Sets the basic typography styling for the page.
 Most of the defaults are already in modern-normalize and sanitize.css.
  */
+$animationWidth: 90vw;
+$animationWidthLarger: 60vw;
+$animationWidthMegaLarge: 40vw;
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -38,13 +42,13 @@ body {
 }
 
 main {
-  padding-bottom: 22vw;
-  @media (min-width: 756px) {
-    padding-bottom: 16vw;
-  }
-  @media (min-width: 1920px) {
-    padding-bottom: 12vw;
-  }
+  padding-bottom: 5vw + calc(0.055 * $animationWidth * 2);
+  @media (min-width: 1400px) {
+      padding-bottom: 5vw +  calc(0.055 * $animationWidthLarger * 2);
+    }
+    @media (min-width: 1900px) {
+      padding-bottom: 5vw +  calc(0.055 * $animationWidthMegaLarge *2);
+    }
 }
 
 #__next {
