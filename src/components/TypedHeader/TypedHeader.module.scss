@@ -39,7 +39,7 @@ h1.SiteHeaderMain {
     }
     z-index: 10;
     display: block;
-    width: 0.77 * $animationWidth;
+    width: 0.80 * $animationWidth;
   }
 
 h1.SiteHeaderSub {
@@ -64,6 +64,9 @@ h1.SiteHeaderSub {
       width: 0.75 * $animationWidthMegaLarge;
       bottom:  calc(0.011 * $animationWidthMegaLarge);
       right: calc(0.03 * $animationWidthMegaLarge);
+    }
+    @media (max-width: 640px) {
+      bottom:  0;
     }
   }
 

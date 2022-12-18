@@ -3,11 +3,10 @@ import { NextSeo } from "next-seo";
 import Image from "next/image";
 import axios from "axios";
 import { decode } from "html-entities";
-import parse from 'html-react-parser';
 import TypeIt from "typeit-react";
 import { SRLWrapper } from "simple-react-lightbox";
 import baseStyles from "@/styles/Home.module.scss";
-import styles from "./Inspiratieblog.module.scss";
+import styles from "./Overmij.module.scss";
 import Layout from "@/components/Layout/Layout";
 import TypedHeaderBasic from "@/components/TypedHeader/TypedHeaderBasic";
 import WorkImage from "@/components/WorkImage/WorkImage";
@@ -30,12 +29,6 @@ const Blog = (props) => {
   const windowWidth = useWindowWidth();
   let imageWidth = useRef(40);
   let counter = 1;
-
-  const dataParsed2 = parse('<img src="" data-index="4" data-position="left" />', {
-    replace: domNode => {
-        console.dir(domNode, { depth: null });
-    }
-  });
 
   if(props.pageData[0].content.rendered) {
     dataParsed = props.pageData[0].content.rendered.replace(/<\/p>/g,'').replace(/\n/g,'').split('<p>');
@@ -83,7 +76,7 @@ const Blog = (props) => {
     }
     return (<p key={i}
             dangerouslySetInnerHTML={{
-              __html: thisItem.replace('<blockquote>',''),
+              __html: thisItem,
             }}
           ></p>);
   });
@@ -107,7 +100,7 @@ const Blog = (props) => {
 
 export const getServerSideProps = async ({ params }) => {
   const data = await fetchData(
-    "https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?slug=" + params.slug
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/474"
   );
 
   return {
