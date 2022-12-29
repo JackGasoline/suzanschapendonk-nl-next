@@ -246,24 +246,27 @@ const HomeAnimation = (props) => {
             />
           </div>
         </motion.div>
-        <motion.div
-          key="animation-fotolijstje"
-          className={styles.FotolijstjeWrapper}
-          variants={FotolijstjeAnimation}
-          animate={animationStatus}
-          exit="exit"
-        >
-          <div className={styles.img}>
-            <Image
-              src={fotolijstje}
-              alt="Fotolijstje"
-              layout="fill"
-              objectFit="contain"
-              sizes="15vw"
-              onLoadingComplete={(el) => handleImageLoad(el)}
-            />
-          </div>
-        </motion.div>
+        <Link href="/overmij" passHref>
+          <motion.div
+            key="animation-fotolijstje"
+            className={styles.FotolijstjeWrapper}
+            variants={FotolijstjeAnimation}
+            animate={animationStatus}
+            exit="exit"
+            whileHover="hover"
+          >
+            <div className={styles.img}>
+              <Image
+                src={fotolijstje}
+                alt="Fotolijstje"
+                layout="fill"
+                objectFit="contain"
+                sizes="15vw"
+                onLoadingComplete={(el) => handleImageLoad(el)}
+              />
+            </div>
+          </motion.div>
+        </Link>
         <motion.div
           key="animation-lijn3"
           className={styles.Lijn3Wrapper}
@@ -372,24 +375,27 @@ const HomeAnimation = (props) => {
             />
           </div>
         </motion.div>
-        <motion.div
-          key="animation-koffiepotje"
-          className={styles.KoffiepotjeWrapper}
-          variants={KoffiepotjeAnimation}
-          animate={animationStatus}
-          exit="exit"
-        >
-          <div className={styles.img}>
-            <Image
-              src={koffiepotje}
-              alt="Koffiepotje"
-              layout="fill"
-              objectFit="contain"
-              sizes="15vw"
-              onLoadingComplete={(el) => handleImageLoad(el)}
-            />
-          </div>
-        </motion.div>
+        <Link href="/contact" passHref>
+          <motion.div
+            key="animation-koffiepotje"
+            className={styles.KoffiepotjeWrapper}
+            variants={KoffiepotjeAnimation}
+            animate={animationStatus}
+            exit="exit"
+            whileHover="hover"
+          >
+            <div className={styles.img}>
+              <Image
+                src={koffiepotje}
+                alt="Koffiepotje"
+                layout="fill"
+                objectFit="contain"
+                sizes="15vw"
+                onLoadingComplete={(el) => handleImageLoad(el)}
+              />
+            </div>
+          </motion.div>
+        </Link>
         <motion.div
           key="animation-lijn5"
           className={styles.Lijn5Wrapper}
@@ -462,42 +468,48 @@ const HomeAnimation = (props) => {
             />
           </div>
         </motion.div>
-        <motion.div
-          key="animation-lijstjecorona"
-          className={styles.LijstjecoronaWrapper}
-          variants={LijstjecoronaAnimation}
-          animate={animationStatus}
-          exit="exit"
-        >
-          <div className={styles.img}>
-            <Image
-              src={lijstje_corona}
-              alt="Corona"
-              layout="fill"
-              objectFit="contain"
-              sizes="15vw"
-              onLoadingComplete={(el) => handleImageLoad(el)}
-            />
-          </div>
-        </motion.div>
-        <motion.div
-          key="animation-lijstjezoetzuresaus"
-          className={styles.LijstjezoetzuresausWrapper}
-          variants={LijstjezoetzuresausAnimation}
-          animate={animationStatus}
-          exit="exit"
-        >
-          <div className={styles.img}>
-            <Image
-              src={lijstje_zoetzuresaus}
-              alt="Zoetzure saus"
-              layout="fill"
-              objectFit="contain"
-              sizes="15vw"
-              onLoadingComplete={(el) => handleImageLoad(el)}
-            />
-          </div>
-        </motion.div>
+        <Link href="/prints" passHref>
+          <motion.div
+            key="animation-lijstjecorona"
+            className={styles.LijstjecoronaWrapper}
+            variants={LijstjecoronaAnimation}
+            animate={animationStatus}
+            exit="exit"
+            whileHover="hover"
+          >
+            <div className={styles.img}>
+              <Image
+                src={lijstje_corona}
+                alt="Corona"
+                layout="fill"
+                objectFit="contain"
+                sizes="15vw"
+                onLoadingComplete={(el) => handleImageLoad(el)}
+              />
+            </div>
+          </motion.div>
+        </Link>
+        <Link href="/prints" passHref>
+          <motion.div
+            key="animation-lijstjezoetzuresaus"
+            className={styles.LijstjezoetzuresausWrapper}
+            variants={LijstjezoetzuresausAnimation}
+            animate={animationStatus}
+            exit="exit"
+            whileHover="hover"
+          >
+            <div className={styles.img}>
+              <Image
+                src={lijstje_zoetzuresaus}
+                alt="Zoetzure saus"
+                layout="fill"
+                objectFit="contain"
+                sizes="15vw"
+                onLoadingComplete={(el) => handleImageLoad(el)}
+              />
+            </div>
+          </motion.div>
+        </Link>
     </div>
   );
 };

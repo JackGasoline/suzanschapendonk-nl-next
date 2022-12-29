@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import parse, { domToReact } from 'html-react-parser'
 import axios from 'axios'
 import {decode} from 'html-entities'
 import styles from './Mijnwerk.module.scss'
@@ -23,20 +24,26 @@ const fetchData = async (url) =>
       }),
     );
 
-const Home = props => {
+const Mijnwerk = props => {
   //console.log(props.pageData)
   //console.log(props.pageData);
+
+  const parseOptions =  {
+    replace: domNode => {
+      if (domNode.attribs && domNode.name === 'a') {
+        if (domNode.attribs.href.indexOf('http') < 0)
+        return <Link href={domNode.attribs.href} passHref><a>{domToReact(domNode.children)}</a></Link> 
+      }
+    }
+  }
+
   return (
     <Layout title="Mijn Werk" route={props.route}>
     <div className={styles.container}>
     {props.pageData && (
         <div>
           <TypedHeaderBasic title={decode(props.pageData.title.rendered)} />
-          <div
-            dangerouslySetInnerHTML={{
-              __html: props.pageData.content.rendered,
-            }}
-          ></div>
+          {props.pageData.content.rendered && parse(props.pageData.content.rendered, parseOptions)}
         </div>
       )}
 
@@ -78,4 +85,4 @@ export const getServerSideProps = async () => {
   };
 }
 
- export default Home;
+ export default Mijnwerk;

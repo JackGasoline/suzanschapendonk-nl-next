@@ -54,6 +54,7 @@ $animationWidthMegaLarge: 40vw;
     $top: 9.84;
 
     @include image-size-position($width, $height, $left, $top);
+    cursor: pointer;
   }
 
   .TabascoWrapper {
@@ -146,6 +147,7 @@ $animationWidthMegaLarge: 40vw;
     $top: 31.22;
 
     @include image-size-position($width, $height, $left, $top);
+    cursor: pointer;
   }
 
   .Lijn3Wrapper {
@@ -211,6 +213,7 @@ $animationWidthMegaLarge: 40vw;
     $top: 42.87;
 
     @include image-size-position($width, $height, $left, $top);
+    cursor: pointer;
   }
 
   .Lijn5Wrapper {
@@ -258,6 +261,7 @@ $animationWidthMegaLarge: 40vw;
     $top: 57.98;
 
     @include image-size-position($width, $height, $left, $top);
+    cursor: pointer;
   }
 
   .LijstjezoetzuresausWrapper {
@@ -267,6 +271,7 @@ $animationWidthMegaLarge: 40vw;
     $top: 58.16;
 
     @include image-size-position($width, $height, $left, $top);
+    cursor: pointer;
   }
 
     h1.SiteHeader {

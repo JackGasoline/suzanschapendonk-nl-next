@@ -1,10 +1,9 @@
-import React, { Fragment, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from 'next/link'
 import axios from "axios";
 import { decode } from "html-entities";
-import parse, { domToReact } from 'html-react-parser';
-import styles from "./Overmij.module.scss";
+import parse from 'html-react-parser';
+import styles from "./Inspiratieblog.module.scss";
 import Layout from "@/components/Layout/Layout";
 import TypedHeaderBasic from "@/components/TypedHeader/TypedHeaderBasic";
 import { useWindowWidth } from '@react-hook/window-size/throttled'
@@ -25,7 +24,7 @@ const Blog = (props) => {
   let dataParsed = null;
   const windowWidth = useWindowWidth();
   let imageWidth = useRef(40);
-  let ContentNode = null;
+  let ContentNode = null
 
   useEffect(() => {
     if (windowWidth > 780) {
@@ -62,7 +61,7 @@ const Blog = (props) => {
       </span>)
   }
 
-  const parseOptions =  {
+  const parseOptions = {
     replace: domNode => {
       if (domNode.attribs && domNode.name === 'img') {
         let imageNode = null
@@ -71,27 +70,23 @@ const Blog = (props) => {
         if ( !imageID ) {
           imageID = Number(nodeClasses[2].replace('wp-image-',''))
         }
-        let imageObject = searchTree(Object.values(props.pageData.acf), imageID)
+        let imageObject = searchTree(Object.values(props.pageData[0].acf), imageID)
         if ( imageObject ) {
           imageNode = createImageTag(imageObject, nodeClasses[0])
           return imageNode
         }
       }
-      if (domNode.attribs && domNode.name === 'a') {
-        if (domNode.attribs.href.indexOf('http') < 0)
-        return <Link href={domNode.attribs.href} passHref><a>{domToReact(domNode.children)}</a></Link> 
-      }
     }
   }
-    
+
   return (
-    <Layout title={decode(props.pageData.title.rendered)} route={props.route}>
+    <Layout title={decode(props.pageData[0].title.rendered)} route={props.route}>
     <div className={styles.container}>
 
-      {props.pageData && (
+      {props.pageData[0] && (
         <div>
-          <TypedHeaderBasic title={decode(props.pageData.title.rendered)} />
-           {props.pageData.content.rendered && parse(props.pageData.content.rendered, parseOptions)}
+          <TypedHeaderBasic title={decode(props.pageData[0].title.rendered)} />
+           {props.pageData[0].content.rendered && parse(props.pageData[0].content.rendered, parseOptions)}
 
         </div>
       )}
@@ -102,7 +97,7 @@ const Blog = (props) => {
 
 export const getServerSideProps = async ({ params }) => {
   const data = await fetchData(
-    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/2"
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?slug=" + params.slug
   );
 
   return {
