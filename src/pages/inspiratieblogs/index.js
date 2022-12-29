@@ -50,14 +50,14 @@ const Blog = props => {
       <div>
       {props.pageItems.map((post) => (
           <div className={styles.imageItem} key={post.id}>
-            <Link href={`/inspiratieblog/${post.slug}`} passHref>
+            <Link href={`/inspiratieblogs/${post.slug}`} passHref>
             <a className={styles.workimage}>{post.acf['afbeelding_1'] && post.acf['afbeelding_1'].sizes.woocommerce_single && 
               <Image src={post.acf['afbeelding_1'].sizes.woocommerce_single} alt={post.acf['afbeelding_1'].alt}                       
                 layout="fill"
                 objectFit="contain"
                 sizes="12.8vw" />}
             </a></Link>
-            <Link href={`/mijnwerk/${post.slug}`} passHref>
+            <Link href={`/inspiratieblogs/${post.slug}`} passHref>
               <a className={styles.workLinkText}>{`${decode(post.title.rendered)}`}</a>
             </Link>
           </div>
