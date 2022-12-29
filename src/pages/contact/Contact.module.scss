@@ -27,7 +27,8 @@
   form {
     width: 800px;
     height: 30vh;
-    display: block;
+    display: inline-block;
+    padding-bottom: 20px;
 
     @media (max-width: 1000px) {
       width: 100%
@@ -71,4 +72,32 @@
       }
     }
   }
+}
+
+.imageContainer {
+  width: 100%;
+  margin-top: 30px;
+}
+
+span.imageRight, span.imageLeft {
+  display: block;
+  position: relative;
+  width: 40vw;
+  @media (min-width: 1020px) {
+    width: 20vw;
+  }
+  @media (min-width: 3000px) {
+    width: 12vw;
+  }
+
+}
+
+span.imageRight {
+  float: right;  
+  margin: 0.5vw 0 0.5vw 3%;
+}
+
+span.imageLeft {
+  float: left;  
+  margin: 0.5vw 3% 0.5vw 0;
 }

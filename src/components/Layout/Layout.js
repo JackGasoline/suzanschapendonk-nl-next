@@ -41,6 +41,7 @@ const Layout = ({ children, title, description, canonical, route }) => (
             exit="exit"
             variants={variants}
             transition={{ type: 'linear', duration: 2 }}
+            className={styles.mainBlock}
         >
             {children}
         </motion.main>

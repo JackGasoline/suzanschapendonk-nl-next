@@ -26,6 +26,17 @@ $animationWidthMegaLarge: 40vw;
     }
 }
 
+.mainBlock {
+    padding-bottom: calc(0.055 * $animationWidth * 2 + 35px);
+    @media (min-width: 1400px) {
+        padding-bottom: calc(0.055 * $animationWidthLarger * 2  + 35px);
+      }
+      @media (min-width: 1900px) {
+        padding-bottom: calc(0.055 * $animationWidthMegaLarge *2 + 35px);
+      }
+      overflow: auto;
+}
+
 .lineContainer {
     width: 100%;
     height: 4px;
