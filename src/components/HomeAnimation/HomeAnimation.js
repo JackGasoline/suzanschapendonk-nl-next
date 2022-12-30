@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 import Link from 'next/link'
 import TypeIt from "typeit-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import styles from "./HomeAnimation.module.scss"
 
 import {
@@ -510,6 +510,11 @@ const HomeAnimation = (props) => {
             </div>
           </motion.div>
         </Link>
+        <h2 className={styles.siteSubTitle}>
+             <TypeIt options={{ cursor: false, lifeLike: true, startDelay: 2500 }}>
+                illustraties + ontwerp
+            </TypeIt>
+        </h2>
     </div>
   );
 };

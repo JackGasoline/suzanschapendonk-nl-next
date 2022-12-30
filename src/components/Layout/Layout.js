@@ -6,6 +6,7 @@ import Menu from '../Menu/Menu'
 import TypedHeader from '../TypedHeader/TypedHeader'
 import divider from "../../assets/divider.png";
 import styles from './Layout.module.scss'
+import Backbutton from '../Backbutton/Backbutton'
 
 const variants = {
     hidden: { opacity: 0, y: 0 },
@@ -24,7 +25,7 @@ const Layout = ({ children, title, description, canonical, route }) => (
         <NextSeo title={title} description={description} canonical={canonical} openGraph={{ title, description }} />
         <TypedHeader route={route} />
         <div className={styles.topGradient + (route === '/' ? ' ' + styles.invisible : '')}>
-        <div className={styles.lineContainer}>
+            <div className={styles.lineContainer}>
                 <Image
                 src={divider}
                 alt="Divider"
@@ -33,6 +34,7 @@ const Layout = ({ children, title, description, canonical, route }) => (
                 sizes="100vw"
                 />
             </div>
+            <Backbutton />
         </div>
         <Menu />
         <motion.main

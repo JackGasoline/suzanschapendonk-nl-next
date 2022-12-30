@@ -9,6 +9,8 @@ import styles from "./Contact.module.scss";
 import Layout from "@/components/Layout/Layout";
 import TypedHeaderBasic from "@/components/TypedHeader/TypedHeaderBasic"
 import { useWindowWidth } from '@react-hook/window-size/throttled'
+import { Email } from "react-obfuscate-email"
+import DotLoader from "react-spinners/DotLoader"
 
 const fetchData = async (url) => 
   await axios
@@ -24,25 +26,34 @@ const fetchData = async (url) =>
 
 const Contact = (props) => {
 
-  const [ formSent, setFormSent ] = useState(false)
+  const [ formSent, setFormSent ] = useState('notsubmitted')
+  const formRef = useRef(null)
   const { register, handleSubmit } = useForm()
   const { submit } = useWeb3Forms({
-    access_key: 'af3e402f-a0f7-4a93-94bc-15501059ba5d',
+    access_key: '43033dde-3dc7-45ab-95f8-0caf749ac36f',
     settings: {
       from_name: 'Studio Suzan Schapendonk',
       subject: 'Nieuw bericht via je Website',
     },
     onSuccess: (message, data) => {
-      setFormSent(true);
+      setFormSent('sent');
       console.log(message);
     },
     onError: (message, data) => {
+      setFormSent('notsubmitted');
       console.log(message);
     },
   });
 
   const windowWidth = useWindowWidth();
   let imageWidth = useRef(40);
+
+  const override = {
+    display: "block",
+    margin: "-50% 50%",
+    position: "relative",
+    borderColor: "red",
+  };
 
   useEffect(() => {
     if (windowWidth > 780) {
@@ -56,6 +67,20 @@ const Contact = (props) => {
   const searchTree = (arr, searchKey) => {
     return arr.find(o => o.id === searchKey);
   }
+
+  useEffect(() => {
+    const handleSubmitEvent = event => {
+      setFormSent('sending');
+    };
+
+    const element = formRef.current;
+
+    if (element) {element.addEventListener('submit', handleSubmitEvent)}
+
+    return () => {
+      if (element) {element.removeEventListener('csubmit', handleSubmitEvent)}
+    };
+  }, []);
 
   const createImageTag = ( imageObject, alignment ) => {
     const aspectratio = 100 * imageObject.sizes['large-height'] / imageObject.sizes['large-width']
@@ -95,8 +120,15 @@ const Contact = (props) => {
         }
       }
       if (domNode.attribs && domNode.name === 'a') {
-        if (domNode.attribs.href.indexOf('http') < 0)
-        return <Link href={domNode.attribs.href} passHref><a>{domToReact(domNode.children)}</a></Link> 
+        if (domNode.attribs.href.indexOf('mailto:') === 0) {
+          let mailAddress = domNode.attribs.href.replace('mailto:','')
+          let atSymbol = '<!-- no spam -->@<!-- no spam -->'
+          let displayAddress = mailAddress.replace('@',atSymbol)
+          return (<Email email={mailAddress}><span dangerouslySetInnerHTML={{ __html: `${displayAddress}` }} /></Email>)
+        }
+        if (domNode.attribs.href.indexOf('http') < 0) {
+          return <Link href={domNode.attribs.href} passHref><a>{domToReact(domNode.children)}</a></Link> 
+        }        
       }
     }
   }
@@ -107,8 +139,9 @@ const Contact = (props) => {
         <div>
           <TypedHeaderBasic title="Contact" />
           {props.pageData.content.rendered && parse(props.pageData.content.rendered, parseOptions)}
-          {!formSent ? ( 
-            <form onSubmit={handleSubmit(submit)}>
+          <div className={styles.formContainer}>
+          {formSent === 'notsubmitted' || formSent === 'sending' ? ( 
+            <form ref={formRef} onSubmit={handleSubmit(submit)} className={styles[formSent]}>
               <label><span>Naam:</span> 
               <input
                 type='text'
@@ -135,7 +168,17 @@ const Contact = (props) => {
                 })}
               /></label>
               <button type='submit'>Versturen</button>
-            </form> ) : 'Bericht verstuurd' }
+            </form> ) : <span className={styles.messageSent}>Je bericht is verstuurd!</span> }
+            <DotLoader
+              color="#018387"
+              loading={formSent === 'sending' ? true : false}
+              cssOverride={override}
+              size={imageWidth.current*3}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+              className={styles.spinner}
+            />
+            </div>
         </div>
     </div>
     </Layout>

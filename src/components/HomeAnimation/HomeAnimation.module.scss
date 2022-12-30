@@ -182,7 +182,7 @@ $animationWidthMegaLarge: 40vw;
   .Cactus1Wrapper {
     $width: 6.57;
     $height: 10.88;
-    $left: 37.9;
+    $left: 27.9;
     $top: 44.51;
 
     @include image-size-position($width, $height, $left, $top);
@@ -191,7 +191,7 @@ $animationWidthMegaLarge: 40vw;
   .Cactus2Wrapper {
     $width: 9.22;
     $height: 13.46;
-    $left: 40.52;
+    $left: 30.52;
     $top: 44.38;
 
     @include image-size-position($width, $height, $left, $top);
@@ -200,7 +200,7 @@ $animationWidthMegaLarge: 40vw;
   .Cactus3Wrapper {
     $width: 6.77;
     $height: 11.34;
-    $left: 48.71;
+    $left: 38.71;
     $top: 44.25;
 
     @include image-size-position($width, $height, $left, $top);
@@ -290,6 +290,25 @@ $animationWidthMegaLarge: 40vw;
         font-size: calc(0.055 * $animationWidthMegaLarge);
       }
       @include image-size-position($width, $height, $left, $top);
+    }
+
+    h2.siteSubTitle {
+      $width: 52;
+      $height: 5.5;
+      $left: 48;
+      $top: 51.1;
+      font-family: "itc-american-typewriter";
+      font-weight: 700;
+      font-size: calc(0.03 * $animationWidth);
+      color: black;
+      @media (min-width: 1400px) {
+        font-size: calc(0.03 * $animationWidthLarger);
+      }
+      @media (min-width: 1900px) {
+        font-size: calc(0.03 * $animationWidthMegaLarge);
+      }
+      @include image-size-position($width, $height, $left, $top);
+
     }
 
 

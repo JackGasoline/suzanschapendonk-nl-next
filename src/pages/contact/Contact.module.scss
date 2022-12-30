@@ -24,6 +24,21 @@
     width: 80vw;
   }
 
+  .sending {
+    opacity: 0.2;
+  }
+
+  .formContainer {
+    display: inline-block;
+  }
+
+  .messageSent {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 20px;
+    display: block;
+  }
+
   form {
     width: 800px;
     height: 30vh;
