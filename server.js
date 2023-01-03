@@ -1,7 +1,6 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
-const sslRedirect = require('heroku-ssl-redirect').default
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
@@ -12,6 +11,14 @@ const hostname = 'localhost'
 // const app = next({ dev, hostname, port })
 const app = next({ dev, hostname })
 const handle = app.getRequestHandler()
+
+const requireHTTPS = (req, res) => {
+    if (!req.secure && process.env.NODE_ENV !== "development") {
+      return res.redirect('https://' + req.get('host') + req.url);
+    }
+  }
+
+app.use(requireHTTPS);
 
 app.prepare().then(() => {
     const server = createServer(async (req, res) => {
