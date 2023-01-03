@@ -14,31 +14,26 @@ const app = next({ dev, hostname })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
-const server = createServer(async (req, res) => {
-    try {
-      const parsedUrl = parse(req.url, true)
-      const { pathname, query } = parsedUrl
+    const server = createServer(async (req, res) => {
+        try {
+        const parsedUrl = parse(req.url, true)
+        const { pathname, query } = parsedUrl
 
-      if (pathname === '/a') {
-        await app.render(req, res, '/a', query)
-      } else if (pathname === '/b') {
-        await app.render(req, res, '/b', query)
-      } else {
-        await handle(req, res, parsedUrl)
-      }
-    } catch (err) {
-      console.error('Error occurred handling', req.url, err)
-      res.statusCode = 500
-      res.end('internal server error')
-    }
-  });
-  server.use(sslRedirect());
+        if (pathname === '/a') {
+            await app.render(req, res, '/a', query)
+        } else if (pathname === '/b') {
+            await app.render(req, res, '/b', query)
+        } else {
+            await handle(req, res, parsedUrl)
+        }
+        } catch (err) {
+        console.error('Error occurred handling', req.url, err)
+        res.statusCode = 500
+        res.end('internal server error')
+        }
+    });
 
-  server.all('*', (req, res) => {
-    return handle(req, res);
-  });
-
-  const app = server.listen(0, () => {
+    const app = server.listen(0, () => {
     console.log('Example app listening at http://localhost:', app.address().port);
     });
 
