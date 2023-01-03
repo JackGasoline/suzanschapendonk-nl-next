@@ -12,14 +12,6 @@ const hostname = 'localhost'
 const app = next({ dev, hostname })
 const handle = app.getRequestHandler()
 
-const requireHTTPS = (req, res) => {
-    if (!req.secure && process.env.NODE_ENV !== "development") {
-      return res.redirect('https://' + req.get('host') + req.url);
-    }
-  }
-
-app.use(requireHTTPS);
-
 app.prepare().then(() => {
     const server = createServer(async (req, res) => {
         try {
