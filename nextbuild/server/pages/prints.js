@@ -114,7 +114,7 @@ const Prints = (props)=>{
                     href: domNode.attribs.href,
                     passHref: true,
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                        children: domToReact(domNode.children)
+                        children: (0,html_react_parser__WEBPACK_IMPORTED_MODULE_5__.domToReact)(domNode.children)
                     })
                 }));
             }

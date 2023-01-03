@@ -21,10 +21,8 @@ const fetchData = async (url) =>
     }));
 
 const Blog = (props) => {
-  let dataParsed = null;
   const windowWidth = useWindowWidth();
   let imageWidth = useRef(40);
-  let ContentNode = null
 
   useEffect(() => {
     if (windowWidth > 780) {

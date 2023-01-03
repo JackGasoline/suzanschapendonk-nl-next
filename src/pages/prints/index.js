@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import axios from 'axios'
 import {decode} from 'html-entities'
-import parse from 'html-react-parser';
+import parse, {domToReact} from 'html-react-parser';
 import styles from './Mijnwerk.module.scss'
 import Layout from '@/components/Layout/Layout'
 import TypedHeaderBasic from "@/components/TypedHeader/TypedHeaderBasic";

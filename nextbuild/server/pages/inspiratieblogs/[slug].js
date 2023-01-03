@@ -52,10 +52,8 @@ const fetchData = async (url)=>await axios__WEBPACK_IMPORTED_MODULE_3___default(
     )
 ;
 const Blog = (props)=>{
-    let dataParsed = null;
     const windowWidth = (0,_react_hook_window_size_throttled__WEBPACK_IMPORTED_MODULE_8__.useWindowWidth)();
     let imageWidth = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(40);
-    let ContentNode = null;
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         if (windowWidth > 780) {
             imageWidth.current = 20;
