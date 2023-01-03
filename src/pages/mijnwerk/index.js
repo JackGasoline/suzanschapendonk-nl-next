@@ -38,7 +38,7 @@ const Mijnwerk = props => {
   }
 
   return (
-    <Layout title="Mijn Werk" route={props.route}>
+    <Layout title="Mijn Werk" route={props.route} description="Ik maak zowel illustraties en ontwerpen in opdracht als vrij werk. Op deze pagina vind je een overzicht van mijn portfolio met daarin naast een aantal eigen projecten, het werk dat ik voor verschillende opdrachtgevers heb gemaakt.">
     <div className={styles.container}>
     {props.pageData && (
         <div>

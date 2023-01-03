@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import Link from 'next/link'
 import { slide as Menubar } from 'react-burger-menu'
+import styles from './Menu.module.scss'
 
 
 const Menu = () => {
@@ -15,6 +16,10 @@ const Menu = () => {
                 <li><Link href='/prints' passHref>Prints</Link></li>
                 <li><Link href='/contact' passHref>Contact</Link></li>
             </ul>
+            <div className={styles.sitecredits}>
+                <span>Site designed and built by Roel Jorna</span>
+                <span>Portraits by Saskia Lelieveld Photography</span>
+            </div>
         </Menubar>
     )
 }

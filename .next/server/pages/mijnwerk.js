@@ -125,6 +125,7 @@ const Mijnwerk = (props)=>{
     return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
         title: "Mijn Werk",
         route: props.route,
+        description: "Ik maak zowel illustraties en ontwerpen in opdracht als vrij werk. Op deze pagina vind je een overzicht van mijn portfolio met daarin naast een aantal eigen projecten, het werk dat ik voor verschillende opdrachtgevers heb gemaakt.",
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             className: (_Mijnwerk_module_scss__WEBPACK_IMPORTED_MODULE_9___default().container),
             children: [

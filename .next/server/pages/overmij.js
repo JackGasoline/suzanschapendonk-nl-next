@@ -177,6 +177,7 @@ const Blog = (props)=>{
     return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
         title: (0,html_entities__WEBPACK_IMPORTED_MODULE_5__.decode)(props.pageData.title.rendered),
         route: props.route,
+        description: "Welkom bij Studio Suzan Schapendonk. Je kunt bij me terecht voor illustraties en ontwerpen. Mijn expertise is maatwerk.",
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
             className: (_Overmij_module_scss__WEBPACK_IMPORTED_MODULE_10___default().container),
             children: props.pageData && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {

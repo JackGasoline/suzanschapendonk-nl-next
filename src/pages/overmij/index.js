@@ -85,7 +85,7 @@ const Blog = (props) => {
   }
     
   return (
-    <Layout title={decode(props.pageData.title.rendered)} route={props.route}>
+    <Layout title={decode(props.pageData.title.rendered)} route={props.route} description="Welkom bij Studio Suzan Schapendonk. Je kunt bij me terecht voor illustraties en ontwerpen. Mijn expertise is maatwerk.">
     <div className={styles.container}>
 
       {props.pageData && (
