@@ -1,5 +1,5 @@
 import React from 'react'
-import { NextSeo, ProfilePageJsonLd } from 'next-seo'
+import { NextSeo } from 'next-seo'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Menu from '../Menu/Menu'
@@ -36,7 +36,7 @@ const Layout = ({ children, title, description, canonical, route }) => (
             </div>
             <Backbutton />
         </div>
-        <Menu />
+        <Menu route={route} />
         <motion.main
             initial="hidden"
             animate="enter"

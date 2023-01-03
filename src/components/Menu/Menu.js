@@ -1,20 +1,21 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { slide as Menubar } from 'react-burger-menu'
 import styles from './Menu.module.scss'
 
 
-const Menu = () => {
+const Menu = (props) => {
 
     return (
         <Menubar>
             <ul>
-                <li><Link href='/' passHref>Home</Link></li>
-                <li><Link href='/overmij' passHref>Over mij</Link></li>
-                <li><Link href='/mijnwerk' passHref>Mijn werk</Link></li>
-                <li><Link href='/inspiratieblogs' passHref>Inspiratieblogs</Link></li> 
-                <li><Link href='/prints' passHref>Prints</Link></li>
-                <li><Link href='/contact' passHref>Contact</Link></li>
+                <li>{props.route !== '/' ? <Link href='/' passHref>Home</Link> : 'Home'}</li>
+                <li>{props.route !== '/overmij' ? <Link href='/overmij' passHref>Over mij</Link> : 'Over mij'}</li>
+                <li>{props.route !== '/mijnwerk' ? <Link href='/mijnwerk' passHref>Mijn werk</Link> : 'Mijn werk'}</li>
+                <li>{props.route !== '/inspiratieblogs' ? <Link href='/inspiratieblogs' passHref>Inspiratieblogs</Link> : 'Inpriratieblogs'}</li> 
+                <li>{props.route !== '/prints' ? <Link href='/prints' passHref>Prints bestellen</Link> : 'Prints bestellen'}</li>
+                <li>{props.route !== '/contact' ? <Link href='/contact' passHref>Contact</Link> : 'Contact'}</li>
             </ul>
             <div className={styles.sitecredits}>
                 <span>Site designed and built by Roel Jorna</span>

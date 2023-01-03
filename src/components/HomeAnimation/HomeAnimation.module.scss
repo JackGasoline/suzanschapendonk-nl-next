@@ -20,6 +20,12 @@ $animationWidthMegaLarge: 40vw;
     margin-left: calc($left / 100 * $animationWidthMegaLarge);
     margin-top: calc($top / 100 * $animationWidthMegaLarge);
   }
+  @media (max-width: 1399px) and (min-aspect-ratio: 3/4) {
+    width: calc($width / 100 * $animationWidthLarger);
+    height: calc($height / 100 * $animationWidthLarger);
+    margin-left: calc($left / 100 * $animationWidthLarger);
+    margin-top: calc($top / 100 * $animationWidthLarger);
+  }
 }
 
 .container {
@@ -45,6 +51,13 @@ $animationWidthMegaLarge: 40vw;
     height: calc(0.75 * $animationWidthMegaLarge);
     left: calc((100vw - $animationWidthMegaLarge) / 2);
     top: calc(55vh - $animationWidthMegaLarge/2);
+  }
+
+  @media (max-width: 1399px) and (min-aspect-ratio: 3/4) {
+    width: $animationWidthLarger;
+    height: calc(0.75 * $animationWidthLarger);
+    left: calc((100vw - $animationWidthLarger) / 2);
+    top: calc(60vh - $animationWidthLarger/2);
   }
 
   .WorcestershiresauceWrapper {
@@ -289,6 +302,11 @@ $animationWidthMegaLarge: 40vw;
       @media (min-width: 1900px) {
         font-size: calc(0.055 * $animationWidthMegaLarge);
       }
+      @media (max-width: 1399px) and (min-aspect-ratio: 3/4) {
+        font-size: calc(0.055 * $animationWidthLarger);
+      }
+
+      
       @include image-size-position($width, $height, $left, $top);
     }
 
@@ -307,6 +325,10 @@ $animationWidthMegaLarge: 40vw;
       @media (min-width: 1900px) {
         font-size: calc(0.03 * $animationWidthMegaLarge);
       }
+      @media (max-width: 1399px) and (min-aspect-ratio: 3/4) {
+        font-size: calc(0.03 * $animationWidthLarger);
+      }
+
       @include image-size-position($width, $height, $left, $top);
 
     }
