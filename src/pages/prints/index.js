@@ -3,6 +3,7 @@ import Link from 'next/link'
 import axios from 'axios'
 import {decode} from 'html-entities'
 import parse, {domToReact} from 'html-react-parser';
+import { Email } from "react-obfuscate-email"
 import styles from './Mijnwerk.module.scss'
 import Layout from '@/components/Layout/Layout'
 import TypedHeaderBasic from "@/components/TypedHeader/TypedHeaderBasic";
@@ -29,8 +30,15 @@ const Prints = props => {
   const parseOptions =  {
     replace: domNode => {
       if (domNode.attribs && domNode.name === 'a') {
-        if (domNode.attribs.href.indexOf('http') < 0)
-        return <Link href={domNode.attribs.href} passHref><a>{domToReact(domNode.children)}</a></Link> 
+        if (domNode.attribs.href.indexOf('mailto:') === 0) {
+          let mailAddress = domNode.attribs.href.replace('mailto:','')
+          let atSymbol = '<!-- no spam -->@<!-- no spam -->'
+          let displayAddress = mailAddress.replace('@',atSymbol)
+          return (<Email email={mailAddress}><span dangerouslySetInnerHTML={{ __html: `${displayAddress}` }} /></Email>)
+        }
+        if (domNode.attribs.href.indexOf('http') < 0) {
+          return <Link href={domNode.attribs.href} passHref><a>{domToReact(domNode.children)}</a></Link> 
+        }        
       }
     }
   }
