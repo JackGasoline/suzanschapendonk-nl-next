@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link href="https://use.typekit.net/ioi0tun.css" rel="stylesheet" />
-          <link href="http://fonts.cdnfonts.com/css/avenir" rel="stylesheet" />
+          <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" />
         </Head>
         <body>
           <Main />

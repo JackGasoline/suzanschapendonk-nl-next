@@ -28,7 +28,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1__["default"] {
                             rel: "stylesheet"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
-                            href: "http://fonts.cdnfonts.com/css/avenir",
+                            href: "https://fonts.cdnfonts.com/css/avenir",
                             rel: "stylesheet"
                         })
                     ]

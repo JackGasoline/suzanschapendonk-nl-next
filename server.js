@@ -1,6 +1,7 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
+const sslRedirect = require('heroku-ssl-redirect').default
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
@@ -13,7 +14,7 @@ const app = next({ dev, hostname })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
-  createServer(async (req, res) => {
+const server = createServer(async (req, res) => {
     try {
       const parsedUrl = parse(req.url, true)
       const { pathname, query } = parsedUrl
@@ -30,8 +31,15 @@ app.prepare().then(() => {
       res.statusCode = 500
       res.end('internal server error')
     }
-  }).listen(0, (err) => {
-    if (err) throw err
-    console.log(`> Ready on http://${hostname}`)
-  })
+  });
+  server.use(sslRedirect());
+
+  server.all('*', (req, res) => {
+    return handle(req, res);
+  });
+
+  const app = server.listen(0, () => {
+    console.log('Example app listening at http://localhost:', app.address().port);
+    });
+
 })

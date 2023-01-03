@@ -14,6 +14,7 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "follow-redirects": "^1.14.8",
     "framer-motion": "^6.2.8",
+    "heroku-ssl-redirect": "^0.1.1",
     "html-entities": "^2.3.2",
     "html-react-parser": "^3.0.4",
     "minimist": "^1.2.6",
