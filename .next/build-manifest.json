@@ -5,9 +5,9 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/wYFIFt4SZgyGv_JaX5a38/_buildManifest.js",
-    "static/wYFIFt4SZgyGv_JaX5a38/_ssgManifest.js",
-    "static/wYFIFt4SZgyGv_JaX5a38/_middlewareManifest.js"
+    "static/p-UXKeaSNKnUwnKoB6QXt/_buildManifest.js",
+    "static/p-UXKeaSNKnUwnKoB6QXt/_ssgManifest.js",
+    "static/p-UXKeaSNKnUwnKoB6QXt/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
@@ -16,7 +16,7 @@
       "static/chunks/main-a054bbf31fb90f6a.js",
       "static/chunks/777cf710-4c85adf6f6ababae.js",
       "static/chunks/537-ce1978ce7a3703f1.js",
-      "static/css/2700c7cc9d97d02f.css",
+      "static/css/3b227d92f522133c.css",
       "static/chunks/pages/index-b29c0b60dfb730bb.js"
     ],
     "/_app": [
@@ -24,7 +24,7 @@
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-a054bbf31fb90f6a.js",
       "static/css/9abc51c666763c72.css",
-      "static/chunks/pages/_app-1aeb348b56420e6a.js"
+      "static/chunks/pages/_app-c9df313a564d6b22.js"
     ],
     "/_error": [
       "static/chunks/webpack-df4cf1c8d23aa877.js",
@@ -40,7 +40,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/175-3dbd94b3efdffb53.js",
-      "static/css/585e76841af8fbad.css",
+      "static/css/191c0898c0d8b560.css",
       "static/chunks/pages/contact-90c2474b636092cf.js"
     ],
     "/inspiratieblogs": [
@@ -51,7 +51,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/111-721df86f1b1f755f.js",
-      "static/css/fefdb00364b4f728.css",
+      "static/css/5b009d649bff4b46.css",
       "static/chunks/pages/inspiratieblogs-c8c794db5e8ef064.js"
     ],
     "/inspiratieblogs/[slug]": [
@@ -62,7 +62,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/111-721df86f1b1f755f.js",
-      "static/css/fefdb00364b4f728.css",
+      "static/css/5b009d649bff4b46.css",
       "static/chunks/pages/inspiratieblogs/[slug]-b087ef585de22a0e.js"
     ],
     "/mijnwerk": [
@@ -73,7 +73,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/111-721df86f1b1f755f.js",
-      "static/css/f163f02cae962c39.css",
+      "static/css/6df59ba130f78181.css",
       "static/chunks/pages/mijnwerk-6648ed0f040df945.js"
     ],
     "/mijnwerk/[slug]": [
@@ -84,7 +84,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/111-721df86f1b1f755f.js",
-      "static/css/f163f02cae962c39.css",
+      "static/css/6df59ba130f78181.css",
       "static/chunks/pages/mijnwerk/[slug]-bac99a662563524a.js"
     ],
     "/overmij": [
@@ -95,7 +95,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/111-721df86f1b1f755f.js",
-      "static/css/cc02b7578e25faa8.css",
+      "static/css/7d6488e9cf95daa6.css",
       "static/chunks/pages/overmij-d60916d6d4fb8970.js"
     ],
     "/prints": [
@@ -106,7 +106,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/111-721df86f1b1f755f.js",
-      "static/css/dc373eb611d5395d.css",
+      "static/css/406fddb71b036198.css",
       "static/chunks/pages/prints-2085e04cd8160c61.js"
     ],
     "/prints/[slug]": [
@@ -117,7 +117,7 @@
       "static/chunks/537-ce1978ce7a3703f1.js",
       "static/chunks/935-ed665ea3802180c4.js",
       "static/chunks/111-721df86f1b1f755f.js",
-      "static/css/dc373eb611d5395d.css",
+      "static/css/406fddb71b036198.css",
       "static/chunks/pages/prints/[slug]-c22f8f423f793639.js"
     ]
   },

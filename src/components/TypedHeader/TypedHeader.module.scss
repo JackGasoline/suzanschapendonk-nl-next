@@ -32,20 +32,20 @@ h1.SiteHeaderMain {
       font-size: calc(0.055 * $animationWidthLarger);
       margin-left: calc(50vw - $animationWidthLarger/2 + 0.2*$animationWidthLarger);
       margin-top: calc(55vh - 0.137 * $animationWidthLarger);
-      width: 0.75 * $animationWidthLarger;
+      width: 0.8 * $animationWidthLarger;
     }
     @media (min-width: 1900px) {
       font-size: calc(0.055 * $animationWidthMegaLarge);
       margin-left: calc(50vw - $animationWidthMegaLarge/2 + 0.2*$animationWidthMegaLarge);
       margin-top: calc(55vh - 0.137 * $animationWidthMegaLarge);
-      width: 0.75 * $animationWidthMegaLarge;
+      width: 0.8 * $animationWidthMegaLarge;
 
     }
     @media (max-width: 1399px) and (min-aspect-ratio: 3/4) {
       font-size: calc(0.055 * $animationWidthLarger);
       margin-left: calc(50vw - $animationWidthLarger/2 + 0.2*$animationWidthLarger);
       margin-top: calc(60vh - 0.137 * $animationWidthLarger);
-      width: 0.75 * $animationWidthLarger;
+      width: 0.8 * $animationWidthLarger;
     }
     z-index: 10;
     display: block;
