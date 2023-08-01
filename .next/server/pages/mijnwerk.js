@@ -176,8 +176,8 @@ const Mijnwerk = (props)=>{
 };
 const getServerSideProps = async ()=>{
     const data = await getAllData([
-        "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/27?_fields[]=title&_fields[]=content",
-        "https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?categories=17&orderby=date&_fields[]=id&_fields[]=title&_fields[]=slug&_fields[]=acf.afbeelding_1.id&_fields[]=acf.afbeelding_1.title&_fields[]=acf.afbeelding_1.url&_fields[]=acf.afbeelding_1.sizes.woocommerce_single&_fields[]=acf.afbeelding_1.alt&per_page=100", 
+        "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/27?_fields[]=title&_fields[]=content&time=" + Date.now(),
+        "https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?categories=17&orderby=date&_fields[]=id&_fields[]=title&_fields[]=slug&_fields[]=acf.afbeelding_1.id&_fields[]=acf.afbeelding_1.title&_fields[]=acf.afbeelding_1.url&_fields[]=acf.afbeelding_1.sizes.woocommerce_single&_fields[]=acf.afbeelding_1.alt&per_page=100&time" + Date.now(), 
     ]);
     return {
         props: {

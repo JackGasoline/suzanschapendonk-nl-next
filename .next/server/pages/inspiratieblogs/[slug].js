@@ -123,7 +123,7 @@ const Blog = (props)=>{
     }));
 };
 const getServerSideProps = async ({ params  })=>{
-    const data = await fetchData("https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?slug=" + params.slug);
+    const data = await fetchData("https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?slug=" + params.slug + "&time=" + Date.now());
     return {
         props: data
     };
