@@ -279,7 +279,7 @@ const Menu = (props)=>{
                             href: "/inspiratieblogs",
                             passHref: true,
                             children: "Inspiratieblogs"
-                        }) : 'Inpriratieblogs'
+                        }) : 'Inspiratieblogs'
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                         children: props.route !== '/prints' ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_link__WEBPACK_IMPORTED_MODULE_2__["default"], {
