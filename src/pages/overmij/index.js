@@ -102,7 +102,7 @@ const Blog = (props) => {
 
 export const getServerSideProps = async ({ params }) => {
   const data = await fetchData(
-    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/2"
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/2?time=" + Date.now()
   );
 
   return {

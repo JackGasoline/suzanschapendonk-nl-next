@@ -187,7 +187,7 @@ const Contact = (props) => {
 
 export const getServerSideProps = async ({ params }) => {
   const data = await fetchData(
-    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/541"
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/pages/541?time=" + Date.now()
   );
 
   return {

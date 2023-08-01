@@ -95,7 +95,7 @@ const Blog = (props) => {
 
 export const getServerSideProps = async ({ params }) => {
   const data = await fetchData(
-    "https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?slug=" + params.slug
+    "https://api.suzanschapendonk.nl/wp-json/wp/v2/posts?slug=" + params.slug + "&time=" + Date.now()
   );
 
   return {
